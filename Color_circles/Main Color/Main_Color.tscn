@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://db3kggeq1vlgj"]
+
+[ext_resource type="Script" uid="uid://d0x1hftx8bwng" path="res://Color_circles/Main Color/main_color.gd" id="1_0glqe"]
+[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://icon.svg" id="1_fu0nq"]
+[ext_resource type="Shader" uid="uid://bl6f16jyrepgu" path="res://Color_circles/Main Color/Main_Color.gdshader" id="2_p54bd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6i6fx"]
+shader = ExtResource("2_p54bd")
+shader_parameter/override_color = Vector4(0, 0, 0, 0)
+
+[node name="MainColor" type="Node2D"]
+script = ExtResource("1_0glqe")
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_6i6fx")
+position = Vector2(-2, -1)
+texture = ExtResource("1_fu0nq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -64.0
+offset_top = -117.0
+offset_right = 67.0
+offset_bottom = -71.0
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+text = "Color to Match"
+horizontal_alignment = 1

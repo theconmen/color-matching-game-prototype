@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://coelioq7h5jva"]
+
+[ext_resource type="Shader" uid="uid://bmrnk0m7mhpsw" path="res://Color_circles/Color Circle/Color_circle.gdshader" id="1_4reww"]
+[ext_resource type="Script" uid="uid://bj3566lycfqhf" path="res://Color_circles/Color Circle/color_circle.gd" id="1_gmqdt"]
+[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://icon.svg" id="1_mvpv2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gmqdt"]
+resource_local_to_scene = true
+shader = ExtResource("1_4reww")
+shader_parameter/override_color = Vector4(0, 0, 0, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmqdt"]
+radius = 93.26307
+
+[node name="ColorCircle" type="RigidBody2D"]
+z_index = -1
+gravity_scale = 0.0
+script = ExtResource("1_gmqdt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_gmqdt")
+texture = ExtResource("1_mvpv2")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("CircleShape2D_gmqdt")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-115, -113, 232, 234)
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

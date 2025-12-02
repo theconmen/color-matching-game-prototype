@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsd3ai7xtupa"]
+
+[ext_resource type="Shader" uid="uid://bmrnk0m7mhpsw" path="res://Color_circles/Color Circle/Color_circle.gdshader" id="1_1lhho"]
+[ext_resource type="Script" uid="uid://b3lgpqk52onmk" path="res://Color_circles/Player Color/player_color.gd" id="1_2boyh"]
+[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://icon.svg" id="2_2boyh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_prhqo"]
+resource_local_to_scene = true
+shader = ExtResource("1_1lhho")
+shader_parameter/override_color = Vector4(1, 1, 0, 1)
+
+[node name="PlayerColor" type="Node2D"]
+script = ExtResource("1_2boyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_prhqo")
+texture = ExtResource("2_2boyh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -62.0
+offset_top = -98.0
+offset_right = 69.0
+offset_bottom = -75.0
+theme_override_colors/font_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
+text = "Your Color"
+horizontal_alignment = 1
