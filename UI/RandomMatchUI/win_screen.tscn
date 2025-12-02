@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b6im1jbu6vwgk"]
 
-[ext_resource type="Script" uid="uid://dkpv2x80xjf0g" path="res://UI/win_screen.gd" id="1_t25dr"]
+[ext_resource type="Script" uid="uid://dkpv2x80xjf0g" path="res://UI/RandomMatchUI/win_screen.gd" id="1_t25dr"]
 
 [node name="WinScreen" type="CanvasLayer"]
 process_mode = 3

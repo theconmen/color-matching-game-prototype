@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Color matching game prototype"
-run/main_scene="uid://dkbhys3yb3puy"
+run/main_scene="uid://ci65qcv2o5v4a"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

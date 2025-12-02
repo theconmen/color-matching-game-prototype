@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0wa0ple75qcp"]
+
+[ext_resource type="Script" uid="uid://bl3267egbnaxn" path="res://UI/Main UI/main_scene_ui.gd" id="1_fvxec"]
+
+[node name="Main Scene UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fvxec")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1151.0
+offset_bottom = 651.0
+mouse_filter = 2
+color = Color(0.75686276, 0.7176471, 0.95686275, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 25.0
+offset_top = 59.0
+offset_right = 1128.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 69
+text = "Unnamed Color Game Prototype"
+horizontal_alignment = 1
+
+[node name="RandomMatch" type="Button" parent="CanvasLayer"]
+offset_left = 73.0
+offset_top = 281.0
+offset_right = 326.0
+offset_bottom = 324.0
+text = "Random Match Game"
+
+[node name="RGB Race" type="Button" parent="CanvasLayer"]
+offset_left = 445.0
+offset_top = 280.0
+offset_right = 698.0
+offset_bottom = 323.0
+text = "RGB Race"
+
+[connection signal="pressed" from="CanvasLayer/RandomMatch" to="." method="_on_random_match_pressed"]
+[connection signal="pressed" from="CanvasLayer/RGB Race" to="." method="_on_rgb_race_pressed"]

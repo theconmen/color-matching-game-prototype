@@ -1,42 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkbhys3yb3puy"]
+[gd_scene load_steps=3 format=3 uid="uid://ci65qcv2o5v4a"]
 
-[ext_resource type="Script" uid="uid://dwu5ia2hsfn0b" path="res://Main/main.gd" id="1_eunhr"]
-[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Color_circles/Main Color/Main_Color.tscn" id="3_liyct"]
-[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Color_circles/Player Color/player_color.tscn" id="4_eunhr"]
-[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Background/Background.tscn" id="4_ib3t1"]
-[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://UI/win_screen.tscn" id="5_k3v36"]
+[ext_resource type="Script" uid="uid://bslt2o5ed3os5" path="res://Main/main.gd" id="1_eunhr"]
+[ext_resource type="PackedScene" uid="uid://b0wa0ple75qcp" path="res://UI/Main UI/main_scene_ui.tscn" id="2_2w1kt"]
 
-[sub_resource type="Curve2D" id="Curve2D_k3v36"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -8, -3, 0, 0, 0, 0, 1158, -3, 0, 0, 0, 0, 1155, 652, 0, 0, 0, 0, 2, 657, 0, 0, 0, 0, -8, -3)
-}
-point_count = 5
-
-[node name="Main" type="Node2D"]
-process_mode = 1
+[node name="Main" type="Node"]
 script = ExtResource("1_eunhr")
 
-[node name="MainColor" parent="." instance=ExtResource("3_liyct")]
-position = Vector2(551, 288)
-
-[node name="Background" parent="." instance=ExtResource("4_ib3t1")]
-layer = -1
-
-[node name="Color_spawn" type="Timer" parent="."]
-process_mode = 1
-wait_time = 2.0
-autostart = true
-
-[node name="PlayerColor" parent="." instance=ExtResource("4_eunhr")]
-position = Vector2(84, 577)
-
-[node name="WinScreen" parent="." instance=ExtResource("5_k3v36")]
-visible = false
-
-[node name="SpawnPath" type="Path2D" parent="."]
-curve = SubResource("Curve2D_k3v36")
-
-[node name="ColorSpawnPath" type="PathFollow2D" parent="SpawnPath"]
-position = Vector2(-8, -3)
-
-[connection signal="timeout" from="Color_spawn" to="." method="_on_color_spawn_timeout"]
+[node name="Main Scene UI" parent="." instance=ExtResource("2_2w1kt")]
