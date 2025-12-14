@@ -8,7 +8,7 @@ Prototype:
 Change randomness to be better (alternate light and dark colors, ensure starting color and main color are different enough)
 Better color_circle spawn location logic - done 
 Removal of color_circles after go off screen or after x time - done
-Change win con to make more sense
+Change win con to make more sense - done
 Timer
 
 Red, green, and blue static colors to get to the right color (race for mult, puzzle for single player)
@@ -17,3 +17,9 @@ Multiplayer = matching race, blue + red + green race, a bunch of colors pop up a
 Single player = Cozy puzzle thing
 
 Colors could pop up and you can choose how much or what property of it you want to add maybe?
+
+To do:
+Change randomness to be better (alternate light and dark colors, ensure starting color and main color are different enough, better random spawners)
+PuzzleRace mode - which of the 3 colors makes the player color the main color?
+QuickMatch mode - which of the colors makes the player color the main color? - gets harder as you go further (less time, more colors, etc.)
+	QuickMatch: keep level counter, at x levels, have a message go on screen that says how it's harder (Faster!, More options!)

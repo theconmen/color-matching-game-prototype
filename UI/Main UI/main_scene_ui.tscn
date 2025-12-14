@@ -29,18 +29,34 @@ text = "Unnamed Color Game Prototype"
 horizontal_alignment = 1
 
 [node name="RandomMatch" type="Button" parent="CanvasLayer"]
-offset_left = 73.0
-offset_top = 281.0
-offset_right = 326.0
-offset_bottom = 324.0
+offset_left = 228.0
+offset_top = 277.0
+offset_right = 481.0
+offset_bottom = 320.0
 text = "Random Match Game"
 
 [node name="RGB Race" type="Button" parent="CanvasLayer"]
-offset_left = 445.0
-offset_top = 280.0
-offset_right = 698.0
-offset_bottom = 323.0
+offset_left = 701.0
+offset_top = 279.0
+offset_right = 954.0
+offset_bottom = 322.0
 text = "RGB Race"
+
+[node name="PuzzleRace" type="Button" parent="CanvasLayer"]
+offset_left = 227.0
+offset_top = 479.0
+offset_right = 480.0
+offset_bottom = 522.0
+text = "Puzzle Race"
+
+[node name="QuickMatch" type="Button" parent="CanvasLayer"]
+offset_left = 697.0
+offset_top = 482.0
+offset_right = 950.0
+offset_bottom = 525.0
+text = "QuickMatch"
 
 [connection signal="pressed" from="CanvasLayer/RandomMatch" to="." method="_on_random_match_pressed"]
 [connection signal="pressed" from="CanvasLayer/RGB Race" to="." method="_on_rgb_race_pressed"]
+[connection signal="pressed" from="CanvasLayer/PuzzleRace" to="." method="_on_puzzle_race_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuickMatch" to="." method="_on_quick_match_pressed"]

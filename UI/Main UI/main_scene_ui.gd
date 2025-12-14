@@ -18,3 +18,11 @@ func _on_random_match_pressed() -> void:
 
 func _on_rgb_race_pressed() -> void:
 	SignalBus.RGB_race_game_selected.emit()
+
+
+func _on_puzzle_race_pressed() -> void:
+	SignalBus.puzzle_race_game_selected.emit()
+
+
+func _on_quick_match_pressed() -> void:
+	SignalBus.quick_match_game_selected.emit()

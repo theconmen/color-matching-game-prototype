@@ -26,11 +26,23 @@ func get_random_color():
 
 
 func _on_color_circle_left_click(incoming_color : Color):
-	average_and_set_new_color(incoming_color)
+	match ColorTracker.current_game:
+		ColorTracker.GAME.RandomMatch:
+			average_and_set_new_color(incoming_color)
+		ColorTracker.GAME.RGBRace:
+			add_and_set_new_color(incoming_color)
+		ColorTracker.GAME.PuzzleRace:
+			pass
 	
 	
 func _on_color_circle_right_click(incoming_color : Color):
-	replace_and_set_new_color(incoming_color)
+	match ColorTracker.current_game:
+		ColorTracker.GAME.RandomMatch:
+			replace_and_set_new_color(incoming_color)
+		ColorTracker.GAME.RGBRace:
+			subtract_and_set_new_color(incoming_color)
+		ColorTracker.GAME.PuzzleRace:
+			pass
 
 
 func average_and_set_new_color(color):
@@ -55,3 +67,22 @@ func set_color(new_color: Color):
 func set_random_color():
 	var new_color = get_random_color()
 	set_color(new_color)
+	
+func add_and_set_new_color(color):
+	var new_color: Color
+	new_color.r = clamp((current_color.r + color.r), 0, 1)
+	new_color.g = clamp((current_color.g + color.g), 0, 1)
+	new_color.b = clamp((current_color.b + color.b), 0, 1)
+	set_color(new_color)
+	
+func subtract_and_set_new_color(color):
+	var new_color: Color
+	new_color.r = clamp((current_color.r - color.r), 0, 1)
+	new_color.g = clamp((current_color.g - color.g), 0, 1)
+	new_color.b = clamp((current_color.b - color.b), 0, 1)
+	set_color(new_color)
+
+
+	#new_color.r = clamp((current_color.r - color.r), 0, 1)
+	#new_color.g = clamp((current_color.g - color.g), 0, 1)
+	#new_color.b = clamp((current_color.b - color.b), 0, 1)

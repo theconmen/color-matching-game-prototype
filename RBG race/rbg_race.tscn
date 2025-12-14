@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://dogly64edrtnt"]
+[gd_scene load_steps=7 format=3 uid="uid://dogly64edrtnt"]
+
+[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Color_circles/Main Color/Main_Color.tscn" id="1_0jep7"]
+[ext_resource type="Script" uid="uid://bw2xll47fa8gp" path="res://RBG race/rbg_race.gd" id="1_m2yx8"]
+[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Color_circles/Player Color/player_color.tscn" id="2_dv4e4"]
+[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Background/Background.tscn" id="3_dv4e4"]
+[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://UI/RandomMatchUI/win_screen.tscn" id="4_vemeg"]
+[ext_resource type="PackedScene" uid="uid://do5fcpkunr1c8" path="res://Color_circles/Static Circles/static_circle.tscn" id="6_ta03n"]
 
 [node name="RBG Race" type="Node2D"]
+script = ExtResource("1_m2yx8")
+
+[node name="MainColor" parent="." instance=ExtResource("1_0jep7")]
+position = Vector2(559, 225)
+
+[node name="PlayerColor" parent="." instance=ExtResource("2_dv4e4")]
+position = Vector2(91, 570)
+
+[node name="Background" parent="." instance=ExtResource("3_dv4e4")]
+layer = -6
+
+[node name="WinScreen" parent="." instance=ExtResource("4_vemeg")]
+visible = false
+
+[node name="StaticCircleRed" parent="." instance=ExtResource("6_ta03n")]
+position = Vector2(311, 531)
+
+[node name="StaticCircleGreen" parent="." instance=ExtResource("6_ta03n")]
+position = Vector2(623, 529)
+
+[node name="StaticCircleBlue" parent="." instance=ExtResource("6_ta03n")]
+position = Vector2(933, 528)
