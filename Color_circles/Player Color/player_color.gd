@@ -32,7 +32,7 @@ func _on_color_circle_left_click(incoming_color : Color):
 		ColorTracker.GAME.RGBRace:
 			add_and_set_new_color(incoming_color)
 		ColorTracker.GAME.PuzzleRace:
-			pass
+			average_and_set_new_color(incoming_color)
 	
 	
 func _on_color_circle_right_click(incoming_color : Color):
@@ -42,7 +42,7 @@ func _on_color_circle_right_click(incoming_color : Color):
 		ColorTracker.GAME.RGBRace:
 			subtract_and_set_new_color(incoming_color)
 		ColorTracker.GAME.PuzzleRace:
-			pass
+			average_and_set_new_color(incoming_color)
 
 
 func average_and_set_new_color(color):

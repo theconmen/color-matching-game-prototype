@@ -24,6 +24,7 @@ func _ready() -> void:
 	SignalBus.random_match_game_selected.connect(set_game_to_random_match)
 	SignalBus.RGB_race_game_selected.connect(set_game_to_rgb_race)
 	SignalBus.puzzle_race_game_selected.connect(set_game_to_puzzle_race)
+	SignalBus.quick_match_game_selected.connect(set_game_to_quick_match)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -58,11 +59,7 @@ func check_player_win_con():
 				WIN_CON_TYPE.dominant_avg:
 					check_dominant_channel_avg_win_con(main_color, player_color)
 		GAME.PuzzleRace:
-			match current_win_con_type:
-				WIN_CON_TYPE.avg:
-					check_avg_win_con(main_color, player_color)
-				WIN_CON_TYPE.dominant_avg:
-					check_dominant_channel_avg_win_con(main_color, player_color)
+			check_exact_color_win_con(main_color, player_color)
 		GAME.QuickMatch:
 			check_exact_color_win_con(main_color, player_color)
 		
@@ -74,6 +71,9 @@ func set_game_to_rgb_race():
 	current_game= GAME.RGBRace
 
 func set_game_to_puzzle_race():
+	current_game = GAME.PuzzleRace
+	
+func set_game_to_quick_match():
 	current_game = GAME.PuzzleRace
 		
 
