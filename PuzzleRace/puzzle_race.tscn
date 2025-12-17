@@ -16,7 +16,7 @@ visible = false
 layer = -9
 
 [node name="PlayerColor" parent="." instance=ExtResource("5_tam2p")]
-position = Vector2(142, 286)
+position = Vector2(91, 319)
 
 [node name="MainColor" parent="." instance=ExtResource("6_ml5h3")]
 position = Vector2(1000, 291)
@@ -28,14 +28,14 @@ offset_right = 459.0
 offset_bottom = 514.0
 alignment = 1
 
-[node name="Row 2" type="VBoxContainer" parent="."]
+[node name="Row2" type="VBoxContainer" parent="."]
 offset_left = 501.0
 offset_top = 135.0
 offset_right = 679.0
 offset_bottom = 518.0
 alignment = 1
 
-[node name="Row 3" type="VBoxContainer" parent="."]
+[node name="Row3" type="VBoxContainer" parent="."]
 offset_left = 719.0
 offset_top = 131.0
 offset_right = 897.0

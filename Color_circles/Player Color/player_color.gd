@@ -8,7 +8,8 @@ var b: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_random_color()
+	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace:
+		set_random_color()
 	SignalBus.color_circle_left_click.connect(_on_color_circle_left_click)
 	SignalBus.color_circle_right_click.connect(_on_color_circle_right_click)
 
