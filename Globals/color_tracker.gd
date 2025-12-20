@@ -109,6 +109,6 @@ func check_dominant_channel_avg_win_con(main: Color, player: Color):
 		
 		
 func check_exact_color_win_con(main: Color, player: Color):
-	if main == player:
+	if main.is_equal_approx(player):
 		SignalBus.player_win_con_met.emit()
 		

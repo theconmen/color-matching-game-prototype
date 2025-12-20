@@ -17,7 +17,11 @@ func _ready() -> void:
 		var new_color_circle = color_circle.instantiate()
 		new_color_circle.starting_color = Color((i*.3),0,0,1)
 		Row_one.add_child(new_color_circle)
-
+		
+	var color_helper = PuzzleRaceColorHelper.new()
+	color_helper.generate_puzzle()
+	
+#TODO: figure out how to get everyting from color helper onto the board (refactor color circle to be control node?)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

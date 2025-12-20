@@ -12,8 +12,8 @@ var color_decoys := {"row 0": 0, "row 1": 0, "row 2": 0}
 func generate_puzzle(rows=3):
 	find_player_color()
 	find_main_color(player_color)
-	color_solutions = find_color_solutions()
-	color_decoys = find_decoy_colors()
+	find_color_solutions()
+	find_decoy_colors()
 
 
 # figure out the x number of colors corresponding to x number of rows

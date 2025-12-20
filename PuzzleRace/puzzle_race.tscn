@@ -26,18 +26,21 @@ offset_left = 281.0
 offset_top = 131.0
 offset_right = 459.0
 offset_bottom = 514.0
+theme_override_constants/separation = 150
 alignment = 1
 
 [node name="Row2" type="VBoxContainer" parent="."]
-offset_left = 501.0
-offset_top = 135.0
-offset_right = 679.0
-offset_bottom = 518.0
+offset_left = 521.0
+offset_top = 119.0
+offset_right = 699.0
+offset_bottom = 502.0
+theme_override_constants/separation = 150
 alignment = 1
 
 [node name="Row3" type="VBoxContainer" parent="."]
-offset_left = 719.0
-offset_top = 131.0
-offset_right = 897.0
-offset_bottom = 514.0
+offset_left = 733.0
+offset_top = 127.0
+offset_right = 911.0
+offset_bottom = 510.0
+theme_override_constants/separation = 150
 alignment = 1

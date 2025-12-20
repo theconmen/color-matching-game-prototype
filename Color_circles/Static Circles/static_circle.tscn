@@ -12,9 +12,10 @@ shader_parameter/override_color = Vector4(0, 0, 0, 0)
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmqdt"]
 radius = 93.26307
 
-[node name="StaticCircle" type="RigidBody2D"]
+[node name="StaticCircle" type="Control"]
 z_index = -1
-gravity_scale = 0.0
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_jg2rk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

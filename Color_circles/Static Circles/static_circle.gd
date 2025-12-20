@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var shader = $Sprite2D.material
 var starting_color: Color
