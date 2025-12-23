@@ -5,6 +5,7 @@ var starting_color: Color
 # used in the additinoal subtraction logic and sent in the signal when clicked
 var current_color: Color = Color(1,1,1,1)
 var color_label: String
+var solution_label: String
 
 func _ready() -> void:
 	#shader.setup_local_to_scene()
@@ -12,6 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#$Label.text = solution_label
 	pass
 
 

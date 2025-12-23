@@ -13,7 +13,7 @@ script = ExtResource("1_swcei")
 visible = false
 
 [node name="Background" parent="." instance=ExtResource("3_mx5nl")]
-layer = -19
+layer = -9
 
 [node name="PlayerColor" parent="." instance=ExtResource("5_tam2p")]
 position = Vector2(91, 319)
@@ -44,23 +44,3 @@ offset_right = 911.0
 offset_bottom = 510.0
 theme_override_constants/separation = 150
 alignment = 1
-
-[node name="Label" type="Label" parent="."]
-offset_left = 12.0
-offset_top = 6.0
-offset_right = 1138.0
-offset_bottom = 150.0
-theme_override_colors/font_color = Color(0.021434637, 0.021434635, 0.021434633, 1)
-theme_override_font_sizes/font_size = 34
-text = "Click on one color from each row to match your color to the target color!"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="RestartButton" type="Button" parent="."]
-offset_left = 27.0
-offset_top = 516.0
-offset_right = 125.0
-offset_bottom = 571.0
-text = "Restart?"
-
-[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

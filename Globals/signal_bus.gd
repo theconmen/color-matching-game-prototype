@@ -16,3 +16,10 @@ signal color_circle_right_click(color)
 signal player_new_color(color)
 signal main_color_new_color(color)
 signal player_win_con_met()
+
+#Puzzle race signals
+signal valid_puzzle_found
+
+#Quick match signls
+signal player_loss_con_met
+signal quick_match_puzzle_generated

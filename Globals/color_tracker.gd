@@ -9,6 +9,7 @@ var main_dominant_channel
 var player_dominant_channel
 enum WIN_CON_TYPE {avg, dominant_avg, exact_match}
 var current_win_con_type = WIN_CON_TYPE.dominant_avg
+const EXACT_MATCH_WIN_CON: float = 0.02
 
 #Other Win Con ideas
 # average distance to clor - current
@@ -107,8 +108,10 @@ func check_dominant_channel_avg_win_con(main: Color, player: Color):
 	else:
 		pass
 		
-		
+# check to see if the colors are basically the same
 func check_exact_color_win_con(main: Color, player: Color):
-	if main.is_equal_approx(player):
+	if abs(main.r - player.r) < 0.02 and abs(main.g - player.g) < 0.02 and abs(main.b - player.b) < 0.02:
+		print("Main Color", main)
+		print("Player Color", player)
 		SignalBus.player_win_con_met.emit()
 		

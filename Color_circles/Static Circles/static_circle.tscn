@@ -30,5 +30,13 @@ shape = SubResource("CircleShape2D_gmqdt")
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-115, -113, 232, 234)
 
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -41.0
+offset_top = -17.0
+offset_right = 41.0
+offset_bottom = 26.0
+
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,14 +1,16 @@
 extends CanvasLayer
 
+var win_lose_text: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	SignalBus.player_win_con_met.connect(_hide_pause_label)
+	SignalBus.player_win_con_met.connect(_change_to_win_label)
+	SignalBus.player_loss_con_met.connect(_change_to_loss_label)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$WinLabel.text = win_lose_text
 
 
 func _on_continue_pressed() -> void:
@@ -27,3 +29,11 @@ func _hide_pause_label():
 func _show_pause_label():
 	$PauseLabel.visible = true
 	$WinLabel.visible = false
+	
+func _change_to_win_label():
+	win_lose_text = "You Win!"
+	_hide_pause_label()
+	
+func _change_to_loss_label():
+	win_lose_text = "You Lose :("
+	_hide_pause_label()

@@ -25,11 +25,12 @@ func set_random_color():
 	print(b)
 	set_color()
 	
-func set_color():
+func set_color(color = null):
 	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace:
 		current_color = Color(r,g,b,1)
 		shader.set_shader_parameter("override_color", current_color)
 		SignalBus.main_color_new_color.emit(current_color)
 	else:
-		shader.set_shader_parameter("override_color", current_color)
-		SignalBus.main_color_new_color.emit(current_color)
+		shader.set_shader_parameter("override_color", color)
+		SignalBus.main_color_new_color.emit(color)
+		print("main color:", color)
