@@ -39,4 +39,12 @@ curve = SubResource("Curve2D_k3v36")
 [node name="ColorSpawnPath" type="PathFollow2D" parent="SpawnPath"]
 position = Vector2(-8, -3)
 
+[node name="Label" type="Label" parent="."]
+offset_right = 378.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+text = "Try to match the target color! Left click to combine colors, right click to replace your current color with the clicked color."
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [connection signal="timeout" from="Color_spawn" to="." method="_on_color_spawn_timeout"]

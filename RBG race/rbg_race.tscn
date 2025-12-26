@@ -39,3 +39,14 @@ offset_left = 933.0
 offset_top = 528.0
 offset_right = 933.0
 offset_bottom = 528.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 31.0
+offset_top = 51.0
+offset_right = 370.0
+offset_bottom = 255.0
+theme_override_colors/font_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
+text = "Right click to subtract the Red, Green, or Blue color from your own. Left click to add it. Match the target color."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

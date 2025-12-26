@@ -36,6 +36,8 @@ func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 					print("I shouldn't be here...")
 			ColorTracker.GAME.PuzzleRace:
 				SignalBus.color_circle_left_click.emit(current_color)
+			ColorTracker.GAME.QuickMatch:
+				SignalBus.color_circle_left_click.emit(current_color)
 	#subtracting isn't working!
 	if event.is_action_pressed("right_click"):
 		match ColorTracker.current_game:
@@ -52,6 +54,8 @@ func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 				else:
 					print("I shouldn't be here...")
 			ColorTracker.GAME.PuzzleRace:
+				SignalBus.color_circle_left_click.emit(current_color)
+			ColorTracker.GAME.QuickMatch:
 				SignalBus.color_circle_left_click.emit(current_color)
 
 # set the color of the shader and update the current_color var

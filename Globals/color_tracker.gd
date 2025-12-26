@@ -10,6 +10,7 @@ var player_dominant_channel
 enum WIN_CON_TYPE {avg, dominant_avg, exact_match}
 var current_win_con_type = WIN_CON_TYPE.dominant_avg
 const EXACT_MATCH_WIN_CON: float = 0.02
+var player_color_change_counter := 0
 
 #Other Win Con ideas
 # average distance to clor - current
@@ -26,6 +27,8 @@ func _ready() -> void:
 	SignalBus.RGB_race_game_selected.connect(set_game_to_rgb_race)
 	SignalBus.puzzle_race_game_selected.connect(set_game_to_puzzle_race)
 	SignalBus.quick_match_game_selected.connect(set_game_to_quick_match)
+	SignalBus.player_win_con_met.connect(_reset_player_counter)
+	SignalBus.player_loss_con_met.connect(_reset_player_counter)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,13 +39,16 @@ func _update_main_color(new_color: Color):
 	main_color = new_color
 	main_dominant_channel = get_dominant_channel(main_color)
 	print(str(main_color))
-	check_player_win_con()
+	#check_player_win_con()
 	
 func _update_player_color(new_color: Color):
 	player_color = new_color
 	player_dominant_channel = get_dominant_channel(player_color)
 	print(str(player_color))
-	check_player_win_con()
+	if player_color_change_counter > 0:
+		check_player_win_con()
+	else:
+		player_color_change_counter = 1
 	
 func check_player_win_con():
 	# check different win cons
@@ -75,7 +81,7 @@ func set_game_to_puzzle_race():
 	current_game = GAME.PuzzleRace
 	
 func set_game_to_quick_match():
-	current_game = GAME.PuzzleRace
+	current_game = GAME.QuickMatch
 		
 
 func get_dominant_channel(color: Color) -> String:
@@ -92,6 +98,8 @@ func check_avg_win_con(main: Color, player: Color):
 	var avg_color_difference = abs(((main.r - player.r) + (main.g - player.g) + (main.b - player.b))/3)
 	if avg_color_difference <= WIN_CON:
 			SignalBus.player_win_con_met.emit()
+	elif current_game == GAME.QuickMatch:
+		SignalBus.player_loss_con_met.emit()
 			
 			
 func check_dominant_channel_avg_win_con(main: Color, player: Color):
@@ -99,14 +107,24 @@ func check_dominant_channel_avg_win_con(main: Color, player: Color):
 		if main_dominant_channel == 'Red':
 			if abs(main.r - player.r) <= WIN_CON:
 				SignalBus.player_win_con_met.emit()
+			else:
+				if current_game == GAME.QuickMatch:
+					SignalBus.player_loss_con_met.emit()
 		elif main_dominant_channel == 'Green':
 			if abs(main.g - player.g) <= WIN_CON:
 				SignalBus.player_win_con_met.emit()
+			else:
+				if current_game == GAME.QuickMatch:
+					SignalBus.player_loss_con_met.emit()
 		elif main_dominant_channel == 'Blue':
 			if abs(main.b - player.b) <= WIN_CON:
 				SignalBus.player_win_con_met.emit()
+			else:
+				if current_game == GAME.QuickMatch:
+					SignalBus.player_loss_con_met.emit()
 	else:
-		pass
+		if current_game == GAME.QuickMatch:
+			SignalBus.player_loss_con_met.emit()
 		
 # check to see if the colors are basically the same
 func check_exact_color_win_con(main: Color, player: Color):
@@ -114,4 +132,11 @@ func check_exact_color_win_con(main: Color, player: Color):
 		print("Main Color", main)
 		print("Player Color", player)
 		SignalBus.player_win_con_met.emit()
+	else:
+		if current_game == GAME.QuickMatch:
+			SignalBus.player_loss_con_met.emit()
+			
+		
+func _reset_player_counter():
+	player_color_change_counter = 0
 		

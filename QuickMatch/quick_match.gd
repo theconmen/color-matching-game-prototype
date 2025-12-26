@@ -3,7 +3,7 @@ extends Node2D
 #Game where you need to match a color to another color through an average color in between quickly
 #Fail states: click wrong color, you lose. Take too long, you lose
 #Win state: counter goes up when you get one correct
-#3 second timer, 3 colors to choose from
+#7 second timer, 3 colors to choose from
 
 #TODO what to do if the colors don't match - kind of a big problem with how I have things architected rn
 

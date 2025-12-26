@@ -8,7 +8,7 @@ var b: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace or ColorTracker.current_game != ColorTracker.GAME.QuickMatch:
+	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace and ColorTracker.current_game != ColorTracker.GAME.QuickMatch:
 		set_random_color()
 	SignalBus.color_circle_left_click.connect(_on_color_circle_left_click)
 	SignalBus.color_circle_right_click.connect(_on_color_circle_right_click)
@@ -34,6 +34,8 @@ func _on_color_circle_left_click(incoming_color : Color):
 			add_and_set_new_color(incoming_color)
 		ColorTracker.GAME.PuzzleRace:
 			average_and_set_new_color(incoming_color)
+		ColorTracker.GAME.QuickMatch:
+			average_and_set_new_color(incoming_color)
 	
 	
 func _on_color_circle_right_click(incoming_color : Color):
@@ -43,6 +45,8 @@ func _on_color_circle_right_click(incoming_color : Color):
 		ColorTracker.GAME.RGBRace:
 			subtract_and_set_new_color(incoming_color)
 		ColorTracker.GAME.PuzzleRace:
+			average_and_set_new_color(incoming_color)
+		ColorTracker.GAME.QuickMatch:
 			average_and_set_new_color(incoming_color)
 
 
@@ -83,6 +87,7 @@ func subtract_and_set_new_color(color):
 	new_color.g = clamp((current_color.g - color.g), 0, 1)
 	new_color.b = clamp((current_color.b - color.b), 0, 1)
 	set_color(new_color)
+
 
 
 	#new_color.r = clamp((current_color.r - color.r), 0, 1)

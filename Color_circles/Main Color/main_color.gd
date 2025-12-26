@@ -8,7 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace:
+	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace and ColorTracker.current_game != ColorTracker.GAME.QuickMatch:
 		set_random_color()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,7 +26,7 @@ func set_random_color():
 	set_color()
 	
 func set_color(color = null):
-	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace:
+	if ColorTracker.current_game != ColorTracker.GAME.PuzzleRace and ColorTracker.current_game != ColorTracker.GAME.QuickMatch:
 		current_color = Color(r,g,b,1)
 		shader.set_shader_parameter("override_color", current_color)
 		SignalBus.main_color_new_color.emit(current_color)
