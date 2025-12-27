@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 func _on_color_spawn_timeout() -> void:
 	spawn_color_circle()
 	
+# Code to spawn the color circles
 func spawn_color_circle():
 	var new_color_circle = color_circle.instantiate()
 	var result = set_color_circle_position_rotation()
