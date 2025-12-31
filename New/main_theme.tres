@@ -1,0 +1,84 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://dv75hb386v55v"]
+
+[ext_resource type="FontFile" uid="uid://bbk4t2poqhdfe" path="res://Fonts/PeaberryBase.ttf" id="1_bfdvr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7qt8"]
+bg_color = Color(0.95596343, 0.9559633, 0.95596343, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 2.0
+expand_margin_top = 5.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bh6am"]
+bg_color = Color(0.79902864, 0.8544423, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 2.0
+expand_margin_top = 5.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="DPITexture" id="DPITexture_bfdvr"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+base_scale = 1.46
+
+[sub_resource type="DPITexture" id="DPITexture_513ok"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfdvr"]
+bg_color = Color(0.97153944, 0.3059028, 0.6243059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_513ok"]
+bg_color = Color(0.972549, 0.30588236, 0.62352943, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bfdvr"]
+color = Color(0.6552969, 0.55828494, 0.9463498, 1)
+thickness = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnmde"]
+bg_color = Color(0.5467257, 0.30654427, 0.4379892, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.9221025, 0.7641312, 0.6638075, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[resource]
+default_font = ExtResource("1_bfdvr")
+Button/colors/font_color = Color(0.0018410616, 0.0018410712, 0.0018410641, 1)
+Button/colors/font_focus_color = Color(0.008202003, 0.008202028, 0.008202062, 1)
+Button/colors/font_hover_color = Color(0.0018410641, 0.0018410682, 0.0018410768, 1)
+Button/colors/font_pressed_color = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 24
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxFlat_d7qt8")
+Button/styles/normal = SubResource("StyleBoxFlat_bh6am")
+Button/styles/pressed = null
+HSlider/icons/grabber = SubResource("DPITexture_bfdvr")
+HSlider/icons/grabber_highlight = SubResource("DPITexture_513ok")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_bfdvr")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_513ok")
+HSlider/styles/slider = SubResource("StyleBoxLine_bfdvr")
+Label/colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+Label/colors/font_shadow_color = Color(0, 0.078431375, 0.5764706, 0.2901961)
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_bfdvr")
+Panel/styles/panel = SubResource("StyleBoxFlat_xnmde")
