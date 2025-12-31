@@ -17,8 +17,8 @@ config/icon="res://Legacy/icon.svg"
 
 [autoload]
 
-SignalBus="*res://Legacy/Globals/signal_bus.gd"
-ColorTracker="*res://Legacy/Globals/color_tracker.gd"
+SignalBus="*res://New/Globals/signal_bus.gd"
+ColorTracker="*res://Legacy/Util scipts/color_tracker.gd"
 
 [debug]
 
