@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dkbhys3yb3puy"]
 
-[ext_resource type="Script" uid="uid://dwu5ia2hsfn0b" path="res://RandomMatch/RandomMatch.gd" id="1_t8qfu"]
-[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Color_circles/Main Color/Main_Color.tscn" id="2_24q3n"]
-[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Background/Background.tscn" id="3_d0s2v"]
-[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Color_circles/Player Color/player_color.tscn" id="4_uhbon"]
-[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://UI/RandomMatchUI/win_screen.tscn" id="5_cjun7"]
+[ext_resource type="Script" uid="uid://dwu5ia2hsfn0b" path="res://Legacy/RandomMatch/RandomMatch.gd" id="1_t8qfu"]
+[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Legacy/Color_circles/Main Color/Main_Color.tscn" id="2_24q3n"]
+[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Legacy/Background/Background.tscn" id="3_d0s2v"]
+[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Legacy/Color_circles/Player Color/player_color.tscn" id="4_uhbon"]
+[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://Legacy/UI/RandomMatchUI/win_screen.tscn" id="5_cjun7"]
 
 [sub_resource type="Curve2D" id="Curve2D_k3v36"]
 _data = {

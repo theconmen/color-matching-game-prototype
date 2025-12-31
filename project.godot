@@ -13,12 +13,12 @@ config_version=5
 config/name="Color matching game prototype"
 run/main_scene="uid://ci65qcv2o5v4a"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Legacy/icon.svg"
 
 [autoload]
 
-SignalBus="*res://Globals/signal_bus.gd"
-ColorTracker="*res://Globals/color_tracker.gd"
+SignalBus="*res://Legacy/Globals/signal_bus.gd"
+ColorTracker="*res://Legacy/Globals/color_tracker.gd"
 
 [debug]
 

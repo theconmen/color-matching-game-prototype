@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqrn7bb8oo7sr"]
 
-[ext_resource type="Script" uid="uid://5ab6krqvweer" path="res://PuzzleRace/puzzle_race.gd" id="1_swcei"]
-[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://UI/RandomMatchUI/win_screen.tscn" id="2_bfoyf"]
-[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Background/Background.tscn" id="3_mx5nl"]
-[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Color_circles/Player Color/player_color.tscn" id="5_tam2p"]
-[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Color_circles/Main Color/Main_Color.tscn" id="6_ml5h3"]
+[ext_resource type="Script" uid="uid://5ab6krqvweer" path="res://Legacy/PuzzleRace/puzzle_race.gd" id="1_swcei"]
+[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://Legacy/UI/RandomMatchUI/win_screen.tscn" id="2_bfoyf"]
+[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Legacy/Background/Background.tscn" id="3_mx5nl"]
+[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Legacy/Color_circles/Player Color/player_color.tscn" id="5_tam2p"]
+[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Legacy/Color_circles/Main Color/Main_Color.tscn" id="6_ml5h3"]
 
 [node name="PuzzleRace" type="Node2D"]
 script = ExtResource("1_swcei")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://db3kggeq1vlgj"]
 
-[ext_resource type="Script" uid="uid://d0x1hftx8bwng" path="res://Color_circles/Main Color/main_color.gd" id="1_0glqe"]
-[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://icon.svg" id="1_fu0nq"]
-[ext_resource type="Shader" uid="uid://bl6f16jyrepgu" path="res://Color_circles/Main Color/Main_Color.gdshader" id="2_p54bd"]
+[ext_resource type="Script" uid="uid://d0x1hftx8bwng" path="res://Legacy/Color_circles/Main Color/main_color.gd" id="1_0glqe"]
+[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://Legacy/icon.svg" id="1_fu0nq"]
+[ext_resource type="Shader" uid="uid://bl6f16jyrepgu" path="res://Legacy/Color_circles/Main Color/Main_Color.gdshader" id="2_p54bd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6i6fx"]
 shader = ExtResource("2_p54bd")

@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cwde6txr8ngcw"]
 
-[ext_resource type="Script" uid="uid://ese7xfc03sdy" path="res://QuickMatch/quick_match.gd" id="1_s5p31"]
-[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Background/Background.tscn" id="2_0fdq8"]
-[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://UI/RandomMatchUI/win_screen.tscn" id="3_c2kh7"]
-[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Color_circles/Player Color/player_color.tscn" id="4_c2kh7"]
-[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Color_circles/Main Color/Main_Color.tscn" id="5_d7so0"]
-[ext_resource type="PackedScene" uid="uid://do5fcpkunr1c8" path="res://Color_circles/Static Circles/static_circle.tscn" id="6_4q6et"]
+[ext_resource type="Script" uid="uid://ese7xfc03sdy" path="res://Legacy/QuickMatch/quick_match.gd" id="1_s5p31"]
+[ext_resource type="PackedScene" uid="uid://bjgc08ala0h7v" path="res://Legacy/Background/Background.tscn" id="2_0fdq8"]
+[ext_resource type="PackedScene" uid="uid://b6im1jbu6vwgk" path="res://Legacy/UI/RandomMatchUI/win_screen.tscn" id="3_c2kh7"]
+[ext_resource type="PackedScene" uid="uid://dsd3ai7xtupa" path="res://Legacy/Color_circles/Player Color/player_color.tscn" id="4_c2kh7"]
+[ext_resource type="PackedScene" uid="uid://db3kggeq1vlgj" path="res://Legacy/Color_circles/Main Color/Main_Color.tscn" id="5_d7so0"]
+[ext_resource type="PackedScene" uid="uid://do5fcpkunr1c8" path="res://Legacy/Color_circles/Static Circles/static_circle.tscn" id="6_4q6et"]
 
 [node name="QuickMatch" type="Node2D"]
 script = ExtResource("1_s5p31")
