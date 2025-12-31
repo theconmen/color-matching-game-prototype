@@ -9,6 +9,7 @@ Structure:
 		Scene: Pause Menu - in charge of showing and hiding the pause menu, handling pause menu scenes
 		Scene: GamePlay UI - in charge of showing relevant score information, navigating to different levels (?)
 		Scene: Mini Game Scene - in charge of managing mini game logic, starting and ending mini games - structured like it's own game
+			Each mini game should be self containing with understanding it's own starting and ending
 	Scene: Main MultiPlayer Game scene - no clue how to do this
 		No idea
 	Util:
