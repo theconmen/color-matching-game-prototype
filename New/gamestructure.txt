@@ -1,25 +1,20 @@
-Very basic game:
-Global class for adding and subtracting colors from your color - handled in Your Color instead
-Logic to end the game when you get close enough to the target color - done
-Left and right click handling for averaging/replacing  your color - done
-Global variables to handle the main color's color and your color's color - handled through signals instead - done
-
-Prototype:
-Change randomness to be better (alternate light and dark colors, ensure starting color and main color are different enough)
-Better color_circle spawn location logic - done 
-Removal of color_circles after go off screen or after x time - done
-Change win con to make more sense - done
-Timer
-
-Red, green, and blue static colors to get to the right color (race for mult, puzzle for single player)
-
-Multiplayer = matching race, blue + red + green race, a bunch of colors pop up and move and you have to choose the one that exactly matches
-Single player = Cozy puzzle thing
-
-Colors could pop up and you can choose how much or what property of it you want to add maybe?
-
-To do:
-Change randomness to be better (alternate light and dark colors, ensure starting color and main color are different enough, better random spawners)
-PuzzleRace mode - which of the 3 colors makes the player color the main color?
-QuickMatch mode - which of the colors makes the player color the main color? - gets harder as you go further (less time, more colors, etc.)
-	QuickMatch: keep level counter, at x levels, have a message go on screen that says how it's harder (Faster!, More options!)
+Structure:
+	Scene: Main - in charge of managing moving from the main scene to the actual game
+		Scene: Main scene UI - within scene navigation
+			Credits
+			Settings
+			Single Player
+			Multi Player
+	Scene: Main Single Player Game scene - in charge of loading and unloading mini game scenes, overall game logic, orchestration
+		Scene: Pause Menu - in charge of showing and hiding the pause menu, handling pause menu scenes
+		Scene: GamePlay UI - in charge of showing relevant score information, navigating to different levels (?)
+		Scene: Mini Game Scene - in charge of managing mini game logic, starting and ending mini games - structured like it's own game
+	Scene: Main MultiPlayer Game scene - no clue how to do this
+		No idea
+	Util:
+		SignalBus (Global) - in charge of managing larger signals between games
+		SFXDeconstructor (Global) - manage SFX
+		MiniGame Util helper (class) - handle calculations of each minigame so I don't have to reuse code
+		Game Data - idk how to do this well
+		
+			
