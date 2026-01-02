@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://bmrnk0m7mhpsw" path="res://Legacy/Color_circles/Color Circle/Color_circle.gdshader" id="1_1lhho"]
 [ext_resource type="Script" uid="uid://b3lgpqk52onmk" path="res://Legacy/Color_circles/Player Color/player_color.gd" id="1_2boyh"]
-[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://Legacy/icon.svg" id="2_2boyh"]
+[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://New/icon.svg" id="2_2boyh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_prhqo"]
 resource_local_to_scene = true

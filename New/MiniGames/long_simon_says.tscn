@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ojcsaaew2nt2"]
+
+[node name="LongSimonSays" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1168.0
+offset_bottom = 672.0
+color = Color(0.74509805, 0.80784315, 1, 1)
