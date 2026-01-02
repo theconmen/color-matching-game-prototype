@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ojcsaaew2nt2"]
+[gd_scene load_steps=3 format=3 uid="uid://ojcsaaew2nt2"]
 
 [ext_resource type="PackedScene" uid="uid://cb083mnw8oavl" path="res://New/Util/Components/color_base.tscn" id="1_mm70g"]
+[ext_resource type="Script" uid="uid://7vjqo2scp3kt" path="res://New/MiniGames/long_simon_says.gd" id="1_pa8el"]
 
 [node name="LongSimonSays" type="Node2D"]
+script = ExtResource("1_pa8el")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1168.0
