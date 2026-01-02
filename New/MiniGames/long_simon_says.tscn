@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ojcsaaew2nt2"]
+[gd_scene load_steps=2 format=3 uid="uid://ojcsaaew2nt2"]
+
+[ext_resource type="PackedScene" uid="uid://cb083mnw8oavl" path="res://New/Util/Components/color_base.tscn" id="1_mm70g"]
 
 [node name="LongSimonSays" type="Node2D"]
 
@@ -6,3 +8,26 @@
 offset_right = 1168.0
 offset_bottom = 672.0
 color = Color(0.74509805, 0.80784315, 1, 1)
+
+[node name="SimonColor" parent="." instance=ExtResource("1_mm70g")]
+position = Vector2(576, 296)
+
+[node name="ColorOptions" type="Node" parent="."]
+
+[node name="ColorBase" parent="ColorOptions" instance=ExtResource("1_mm70g")]
+position = Vector2(176, 96)
+
+[node name="ColorBase2" parent="ColorOptions" instance=ExtResource("1_mm70g")]
+position = Vector2(584, 104)
+
+[node name="ColorBase3" parent="ColorOptions" instance=ExtResource("1_mm70g")]
+position = Vector2(952, 104)
+
+[node name="ColorBase4" parent="ColorOptions" instance=ExtResource("1_mm70g")]
+position = Vector2(184, 528)
+
+[node name="ColorBase5" parent="ColorOptions" instance=ExtResource("1_mm70g")]
+position = Vector2(584, 528)
+
+[node name="ColorBase6" parent="ColorOptions" instance=ExtResource("1_mm70g")]
+position = Vector2(952, 536)
