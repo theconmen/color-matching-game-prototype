@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://New/icon.svg" id="1_ep218"]
 [ext_resource type="Shader" uid="uid://db1rt3ibjc8iv" path="res://New/Util/Components/color_base.gdshader" id="2_skjme"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_o1u7p"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_skjme"]
 resource_local_to_scene = true
 shader = ExtResource("2_skjme")
 shader_parameter/override_color = Vector4(1, 1, 0, 1)
@@ -19,7 +19,7 @@ radius = 88.0
 script = ExtResource("1_1nccd")
 
 [node name="Icon" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_o1u7p")
+material = SubResource("ShaderMaterial_skjme")
 texture = ExtResource("1_ep218")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

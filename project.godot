@@ -18,7 +18,6 @@ config/icon="res://New/icon.svg"
 [autoload]
 
 SignalBus="*res://New/Util/Globals/signal_bus.gd"
-ColorTracker="*res://Legacy/Util scipts/color_tracker.gd"
 
 [debug]
 
