@@ -5,6 +5,7 @@ class_name LongSimonSays
 var color_num : int = 0
 var solutions_array = []
 var answers_count: int = 0
+var sections_won: int = 0
 
 #ideas on difficulty increase
 # switch around the color squares every once in a while
@@ -18,6 +19,7 @@ var answers_count: int = 0
 func _ready() -> void:
 	SignalBus.color_left_clicked.connect(_on_color_left_clicked)
 	SignalBus.player_lost.connect(_on_player_lost)
+	SignalBus.mini_game_section_won.connect(_on_mini_game_section_won)
 	SignalBus.mini_game_ready.emit(MiniGameReference.MINI_GAMES.LongSimonSays)
 	$ColorOptions.visible = false
 	$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
@@ -33,7 +35,7 @@ func generate_color_options():
 		color_array.remove_at(0)
 	
 	
-func pick_next_simon_color(amount = 1):
+func pick_next_simon_color(amount: int = 1):
 	for i in range(amount):
 		solutions_array.append(child_array.pick_random())
 	
@@ -67,7 +69,7 @@ func _on_color_left_clicked(answer, _color):
 	# they beat the mini game if the amount of times they answered is more than the amount of solutinos there are
 	if answers_count >= len(solutions_array):
 		answers_count = 0
-		
+		SignalBus.mini_game_section_won.emit()
 		start()
 		
 func _on_player_lost():
@@ -78,5 +80,12 @@ func _on_player_lost():
 func hide_puzzle():
 	$ColorOptions.visible = false
 	$SimonColor.visible = true
-		
+	
+	
+func _on_mini_game_section_won(game):
+	if game == MiniGameReference.MINI_GAMES.LongSimonSays:
+		sections_won += 1
+		if sections_won == 3:
+			SignalBus.mini_game_won.emit(MiniGameReference.MINI_GAMES.LongSimonSays)
+			sections_won = 0
 	

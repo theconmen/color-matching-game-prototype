@@ -16,3 +16,5 @@ signal player_lost()
 signal mini_game_section_won(game)
 signal mini_game_won(game)
 signal mini_game_ready(game)
+
+signal mini_game_round_completed()
