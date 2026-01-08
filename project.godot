@@ -18,6 +18,7 @@ config/icon="res://New/icon.svg"
 [autoload]
 
 SignalBus="*res://New/Util/Globals/signal_bus.gd"
+MiniGameReference="*res://New/Util/Globals/mini_game_reference.gd"
 
 [debug]
 
