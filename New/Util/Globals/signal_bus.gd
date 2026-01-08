@@ -12,3 +12,7 @@ signal color_changed(object, old_color, new_color)
 signal color_left_clicked(object, color)
 signal color_right_clicked(object, color)
 signal player_lost()
+#game should be the enum from mini_game_reference
+signal mini_game_section_won(game)
+signal mini_game_won(game)
+signal mini_game_ready(game)
