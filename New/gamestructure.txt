@@ -18,4 +18,22 @@ Structure:
 		MiniGame Util helper (class) - handle calculations of each minigame so I don't have to reuse code
 		Game Data - idk how to do this well
 		
+		
+GameIdeas:
+	Long Simon says (long strings of colors they have to click in the other screen (memory)) - prototyped
+	Short Simon says (GIves you color have to press correct color quickly (time-based)) - prototyped
+	Quick match (give starting color and end color and pick color in between to get there)
+	Physics based launchpad to the correct color
+	Carnival hammer to right color
+	Color wave (everything on screen gets "hit" with a color and you have to pick the option that was the correct color before)
+	River flow
+	Maze based game
+	Shoot the right enemy based on color
+	Memory (remember the color pairs) -in scope
+	
+	Add juice - in scope
+	Add difficulty scaling -in scope
+	Complete gameplay loop - in scope
+	
+	Done with all in scope items by 2/15
 			

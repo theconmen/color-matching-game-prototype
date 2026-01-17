@@ -6,7 +6,7 @@ var long_simon_says: PackedScene = load('uid://ojcsaaew2nt2')
 
 var current_game
 
-enum MINI_GAMES {LongSimonSays}
+enum MINI_GAMES {LongSimonSays, ShortSimonSays}
 
 
 func _ready() -> void:

@@ -55,3 +55,6 @@ static func generate_random_colors(amount: int):
 
 static func generate_random_color():
 	return Color(randf(), randf(), randf())
+	
+	
+static func 
