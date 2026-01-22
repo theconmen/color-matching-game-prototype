@@ -5,7 +5,12 @@ class_name ColorBase
 
 @export var current_color: Color
 @export var clickable: bool = true
+@export var covered: bool = false
 @onready var sprite_material = $Icon.material
+
+
+func _ready() -> void:
+	$QuestionMark.visible = false
 
 
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
@@ -23,6 +28,17 @@ func set_new_color(color: Color):
 	var old_color = current_color
 	current_color = color
 	#$Icon.self_modulate = color
-	sprite_material.set_shader_parameter("override_color", current_color)
-	SignalBus.color_changed.emit(self, old_color, current_color)
+	if !covered:
+		sprite_material.set_shader_parameter("override_color", current_color)
+		SignalBus.color_changed.emit(self, old_color, current_color)
 	
+
+func set_covered(color_hidden: bool, hidden_color: Color = Color(0.2,0.2,0.2)):
+	if color_hidden:
+		covered = true
+		$QuestionMark.visible = true
+		sprite_material.set_shader_parameter("override_color", hidden_color)
+	elif !color_hidden:
+		covered = false
+		$QuestionMark.visible = false
+		set_new_color(current_color)

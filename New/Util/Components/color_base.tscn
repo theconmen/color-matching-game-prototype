@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cb083mnw8oavl"]
+[gd_scene load_steps=8 format=3 uid="uid://cb083mnw8oavl"]
 
 [ext_resource type="Script" uid="uid://cokakfqr3yucx" path="res://New/Util/Components/color_base.gd" id="1_1nccd"]
-[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://New/icon.svg" id="1_ep218"]
+[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://New/Assets/Visuals/icon.svg" id="1_ep218"]
 [ext_resource type="Shader" uid="uid://db1rt3ibjc8iv" path="res://New/Util/Components/color_base.gdshader" id="2_skjme"]
+[ext_resource type="Texture2D" uid="uid://bjonkh0110g2e" path="res://New/Assets/Visuals/question_mark.png" id="4_o1u7p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_skjme"]
 resource_local_to_scene = true
@@ -29,5 +30,11 @@ shape = SubResource("CircleShape2D_1nccd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
 shape = SubResource("CircleShape2D_ep218")
+
+[node name="QuestionMark" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(7.999977, -7.6293945e-06)
+scale = Vector2(0.35815603, 0.29245284)
+texture = ExtResource("4_o1u7p")
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]

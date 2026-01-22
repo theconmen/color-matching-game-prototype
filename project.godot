@@ -13,7 +13,7 @@ config_version=5
 config/name="Color matching game prototype"
 run/main_scene="uid://ci65qcv2o5v4a"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://New/icon.svg"
+config/icon="res://New/Assets/Visuals/icon.svg"
 
 [autoload]
 
