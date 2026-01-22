@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3bgr7o8dj66f"
-path="res://.godot/imported/icon.svg-7b67799851d3ede3ac8a1db0235e3eb0.ctex"
+uid="uid://bjonkh0110g2e"
+path="res://.godot/imported/question_mark.png-b8c6081bf4796b9ed6b356d84ef10d2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-7b67799851d3ede3ac8a1db0235e3eb0.ctex"]
+source_file="res://New/Assets/Visuals/question_mark.png"
+dest_files=["res://.godot/imported/question_mark.png-b8c6081bf4796b9ed6b356d84ef10d2d.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
