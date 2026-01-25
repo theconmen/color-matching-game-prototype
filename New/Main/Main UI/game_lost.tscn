@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxg7bax3ij0p5"]
+
+[ext_resource type="Script" uid="uid://b41dcyiytphw5" path="res://New/MiniGames/LongSimonSays/game_lost.gd" id="1_xdc8p"]
+[ext_resource type="Theme" uid="uid://dv75hb386v55v" path="res://New/Global UI/main_theme.tres" id="2_1cch3"]
+
+[node name="GameLost" type="CanvasLayer"]
+process_mode = 3
+layer = 8
+script = ExtResource("1_xdc8p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1168.0
+offset_bottom = 664.0
+mouse_filter = 2
+
+[node name="youLose" type="Label" parent="."]
+offset_left = 264.0
+offset_top = 40.0
+offset_right = 888.0
+offset_bottom = 264.0
+theme = ExtResource("2_1cch3")
+theme_override_font_sizes/font_size = 146
+text = "yoiu lose"
+
+[node name="restart" type="Button" parent="."]
+offset_left = 464.0
+offset_top = 264.0
+offset_right = 704.0
+offset_bottom = 400.0
+theme = ExtResource("2_1cch3")
+text = "restart?"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 472.0
+offset_top = 440.0
+offset_right = 712.0
+offset_bottom = 576.0
+theme = ExtResource("2_1cch3")
+text = "Exit to Main menu"
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

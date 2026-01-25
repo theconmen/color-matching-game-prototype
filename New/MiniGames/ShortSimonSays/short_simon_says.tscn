@@ -1,11 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcdto52kfdap6"]
+[gd_scene load_steps=3 format=3 uid="uid://bcdto52kfdap6"]
 
 [ext_resource type="Script" uid="uid://bdpigkki1bjc3" path="res://New/MiniGames/ShortSimonSays/short_simon_says.gd" id="1_fukdu"]
 [ext_resource type="PackedScene" uid="uid://cb083mnw8oavl" path="res://New/Util/Components/color_base.tscn" id="1_j4xno"]
-[ext_resource type="Script" uid="uid://b41dcyiytphw5" path="res://New/MiniGames/LongSimonSays/game_lost.gd" id="2_fukdu"]
-[ext_resource type="Theme" uid="uid://dv75hb386v55v" path="res://New/Global UI/main_theme.tres" id="3_lj3yk"]
 
-[node name="ShortSimonSays" type="Node2D"]
+[node name="ShortSimonSays" type="Node2D" groups=["Mini_games"]]
 script = ExtResource("1_fukdu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -52,33 +50,4 @@ one_shot = true
 wait_time = 2.0
 one_shot = true
 
-[node name="GameLost" type="CanvasLayer" parent="."]
-process_mode = 3
-layer = 8
-visible = false
-script = ExtResource("2_fukdu")
-
-[node name="ColorRect" type="ColorRect" parent="GameLost"]
-offset_right = 1168.0
-offset_bottom = 664.0
-mouse_filter = 2
-
-[node name="youLose" type="Label" parent="GameLost"]
-offset_left = 264.0
-offset_top = 184.0
-offset_right = 888.0
-offset_bottom = 408.0
-theme = ExtResource("3_lj3yk")
-theme_override_font_sizes/font_size = 146
-text = "yoiu lose"
-
-[node name="restart" type="Button" parent="GameLost"]
-offset_left = 408.0
-offset_top = 384.0
-offset_right = 648.0
-offset_bottom = 520.0
-theme = ExtResource("3_lj3yk")
-text = "restart?"
-
 [connection signal="timeout" from="PuzzleTimer" to="." method="_on_puzzle_timer_timeout"]
-[connection signal="pressed" from="GameLost/restart" to="GameLost" method="_on_restart_pressed"]

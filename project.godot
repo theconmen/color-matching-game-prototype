@@ -28,6 +28,10 @@ gdscript/warnings/unused_signal=0
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+Mini_games="All of the mini games available for Load are in this group"
+
 [input]
 
 left_click={

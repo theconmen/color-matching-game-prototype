@@ -18,12 +18,10 @@ var sections_won: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.color_left_clicked.connect(_on_color_left_clicked)
-	SignalBus.player_lost.connect(_on_player_lost)
 	SignalBus.mini_game_section_won.connect(_on_mini_game_section_won)
 	SignalBus.mini_game_ready.emit(MiniGameReference.MINI_GAMES.LongSimonSays)
 	$ColorOptions.visible = false
 	$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
-	$GameLost.visible = false
 	generate_color_options()
 	start()
 
@@ -71,10 +69,6 @@ func _on_color_left_clicked(answer, _color):
 		answers_count = 0
 		SignalBus.mini_game_section_won.emit(MiniGameReference.MINI_GAMES.LongSimonSays)
 		start()
-		
-func _on_player_lost():
-	$GameLost.visible = true
-	get_tree().paused = true
 		
 
 func hide_puzzle():

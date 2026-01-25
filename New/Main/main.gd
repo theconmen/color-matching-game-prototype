@@ -1,5 +1,6 @@
 extends Node
 
+var game_manager = load('uid://dmqro2rnqi8pl')
 
 # TODO: need to figure out difficulty scaling options and how I am swtiching mini games
 
@@ -9,4 +10,4 @@ func _ready() -> void:
 	
 
 func _on_single_player_selected():
-	pass
+	get_tree().change_scene_to_packed(game_manager)
