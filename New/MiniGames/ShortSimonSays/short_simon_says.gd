@@ -17,12 +17,10 @@ var sections_won: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.color_left_clicked.connect(_on_color_left_clicked)
-	SignalBus.player_lost.connect(player_lost)
 	SignalBus.mini_game_section_won.connect(_on_mini_game_section_won)
 	SignalBus.mini_game_ready.emit(MiniGameReference.MINI_GAMES.ShortSimonSays)
 	$ColorOptions.visible = false
 	$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
-	$GameLost.visible = false
 	time_bar.max_value = $PuzzleTimer.wait_time
 	time_bar.value = $PuzzleTimer.wait_time
 	generate_color_options()
@@ -77,10 +75,6 @@ func _on_color_left_clicked(answer, _color):
 		$PuzzleTimer.stop()
 		start()
 		
-func player_lost():
-	$GameLost.visible = true
-	get_tree().paused = true
-		
 
 func hide_puzzle():
 	$ColorOptions.visible = false
@@ -88,12 +82,12 @@ func hide_puzzle():
 	
 	
 func _on_mini_game_section_won(game):
-	if game == MiniGameReference.MINI_GAMES.LongSimonSays:
+	if game == MiniGameReference.MINI_GAMES.ShortSimonSays:
 		sections_won += 1
 		if sections_won == 3:
-			SignalBus.mini_game_won.emit(MiniGameReference.MINI_GAMES.LongSimonSays)
+			SignalBus.mini_game_won.emit(MiniGameReference.MINI_GAMES.ShortSimonSays)
 			sections_won = 0
 	
 
 func _on_puzzle_timer_timeout() -> void:
-	player_lost()
+	SignalBus.player_lost.emit()

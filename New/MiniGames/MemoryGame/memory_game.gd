@@ -20,11 +20,8 @@ var color_selected_array: Array[ColorBase] = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.color_left_clicked.connect(_on_color_left_clicked)
-	SignalBus.player_lost.connect(_on_player_lost)
-	SignalBus.mini_game_section_won.connect(_on_mini_game_section_won)
 	SignalBus.mini_game_ready.emit(MiniGameReference.MINI_GAMES.MemoryGame)
 	$ColorOptions.visible = true
-	$GameLost.visible = false
 	time_bar.max_value = $PuzzleTime.wait_time
 	time_bar.value = $PuzzleTime.wait_time
 	generate_color_options()
@@ -34,7 +31,7 @@ func _process(_delta: float) -> void:
 
 func generate_color_options():
 	#choose 3 colors for the whole array - with 12 color options
-	var color_array = ColorFunctions.generate_random_colors((len(child_array)/4.0))
+	var color_array: Array = ColorFunctions.generate_random_colors((len(child_array)/4.0))
 	# populate color array with the 3 color options
 	for i in range(2):
 		color_array.append_array(color_array.duplicate())
@@ -76,8 +73,6 @@ func _on_color_left_clicked(color_object_clicked: ColorBase, _color):
 			$ShowColor.start()
 			await $ShowColor.timeout
 			#TODO: replace with player actually winning! Looks like they lose rn
-			$GameLost/youLose.text = 'Yoiu Win!'
-			_on_player_lost()
 			SignalBus.mini_game_won.emit(MiniGameReference.MINI_GAMES.MemoryGame)
 		else:
 			$ShowColor.start()
@@ -85,20 +80,7 @@ func _on_color_left_clicked(color_object_clicked: ColorBase, _color):
 			for child in color_selected_array:
 				hide_child(child)
 			color_selected_array = []
-			
-
-func _on_player_lost():
-	$GameLost.visible = true
-	get_tree().paused = true
-	
-	
-func _on_mini_game_section_won(game):
-	if game == MiniGameReference.MINI_GAMES.MemoryGame:
-		sections_won += 1
-		if sections_won == 3:
-			SignalBus.mini_game_won.emit(MiniGameReference.MINI_GAMES.MemoryGame)
-			sections_won = 0
 	
 
 func _on_puzzle_time_timeout() -> void:
-	_on_player_lost()
+	SignalBus.player_lost.emit()
