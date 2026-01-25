@@ -31,9 +31,9 @@ GameIdeas:
 	Shoot the right enemy based on color
 	Memory (remember the color pairs) -in scope
 	
-	Add juice - in scope
-	Add difficulty scaling -in scope
-	Complete gameplay loop - in scope
+	Add juice - in scope - prio 3
+	Add difficulty scaling -in scope - prio 2
+	Complete gameplay loop - in scope - prio 1
 	
 	Done with all in scope items by 2/15
 			
