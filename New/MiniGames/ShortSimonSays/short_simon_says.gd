@@ -7,11 +7,13 @@ var color_num : int = 0
 var solutions_array = []
 var answers_count: int = 0
 var sections_won: int = 0
+var difficulty_scale: int = 0
+var enum_reference := MiniGameReference.MINI_GAMES.ShortSimonSays
+var game_timer_length: float = 2
 
 #ideas on difficulty increase
 # make things faster
 # show more color options
-# start from the end
 # etc
 
 # Called when the node enters the scene tree for the first time.
@@ -21,8 +23,10 @@ func _ready() -> void:
 	SignalBus.mini_game_ready.emit(MiniGameReference.MINI_GAMES.ShortSimonSays)
 	$ColorOptions.visible = false
 	$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
-	time_bar.max_value = $PuzzleTimer.wait_time
-	time_bar.value = $PuzzleTimer.wait_time
+	time_bar.max_value = game_timer_length
+	time_bar.value = game_timer_length
+	difficulty_scale = get_difficulty_scale()
+	manage_difficulty_scale()
 	generate_color_options()
 	start()
 	
@@ -58,7 +62,7 @@ func start():
 func show_puzzle():
 	$ColorOptions.visible = true
 	$SimonColor.visible = false
-	$PuzzleTimer.start()
+	$PuzzleTimer.start(game_timer_length)
 
 func _on_color_left_clicked(answer, _color):
 	if answer == solutions_array[answers_count]:
@@ -88,6 +92,21 @@ func _on_mini_game_section_won(game):
 			SignalBus.mini_game_won.emit(MiniGameReference.MINI_GAMES.ShortSimonSays)
 			sections_won = 0
 	
+func get_difficulty_scale():
+	return MiniGameReference.difficulty_scale[enum_reference]		
+
+
+func manage_difficulty_scale():
+	if difficulty_scale % 3 == 1:
+		# animation "More!"
+		# TODO: add dynamically added color circles
+		pass
+	elif difficulty_scale % 3 == 2:
+		# animation "Faster!"
+		game_timer_length -= 0.1
+	else:
+		pass
+
 
 func _on_puzzle_timer_timeout() -> void:
 	SignalBus.player_lost.emit()
