@@ -32,7 +32,7 @@ GameIdeas:
 	Memory (remember the color pairs) -in scope
 	
 	Add juice - in scope - prio 3
-	Add difficulty scaling -in scope - prio 2
+	Add difficulty scaling -in scope - prio 2 - 
 	Complete gameplay loop - in scope - prio 1 - done(enough)
 	
 	Done with all in scope items by 2/15
