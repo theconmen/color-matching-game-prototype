@@ -9,7 +9,7 @@ var answers_count: int = 0
 var sections_won: int = 0
 var difficulty_scale: int = 0
 var enum_reference := MiniGameReference.MINI_GAMES.ShortSimonSays
-var game_timer_length: float = 2
+var game_timer_length: float = 2.0
 
 #ideas on difficulty increase
 # make things faster
@@ -104,6 +104,9 @@ func manage_difficulty_scale():
 	elif difficulty_scale % 3 == 2:
 		# animation "Faster!"
 		game_timer_length -= 0.1
+	elif difficulty_scale % 5 == 0:
+		#TODO: increase amount of colors to guess
+		pass
 	else:
 		pass
 

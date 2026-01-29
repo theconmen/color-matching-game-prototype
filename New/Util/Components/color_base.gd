@@ -17,6 +17,7 @@ func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: 
 	if clickable:
 		if event.is_action_pressed("left_click"):
 			SignalBus.color_left_clicked.emit(self, current_color)
+			print('left clicked')
 		elif event.is_action_pressed("right_click"):
 			SignalBus.color_right_clicked.emit(self, current_color)
 	else:

@@ -1,6 +1,83 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1hx7f3s3yhv6"]
+[gd_scene format=3 uid="uid://b1hx7f3s3yhv6"]
 
 [ext_resource type="Script" uid="uid://d0lbtwinenknj" path="res://Test/test.gd" id="1_yfa23"]
+[ext_resource type="PackedScene" uid="uid://cb083mnw8oavl" path="res://New/Util/Components/color_base.tscn" id="2_lxp54"]
 
-[node name="Test" type="Node2D"]
+[node name="Test" type="Node2D" unique_id=1381782995]
 script = ExtResource("1_yfa23")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1149504899]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 250
+theme_override_constants/v_separation = 250
+columns = 4
+
+[node name="Control" type="Control" parent="GridContainer" unique_id=880785272]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control" unique_id=1765375077 instance=ExtResource("2_lxp54")]
+
+[node name="Control2" type="Control" parent="GridContainer" unique_id=136984048]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control2" unique_id=923788439 instance=ExtResource("2_lxp54")]
+
+[node name="Control3" type="Control" parent="GridContainer" unique_id=110021742]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control3" unique_id=1651267649 instance=ExtResource("2_lxp54")]
+
+[node name="Control4" type="Control" parent="GridContainer" unique_id=356973846]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control4" unique_id=957172368 instance=ExtResource("2_lxp54")]
+
+[node name="Control5" type="Control" parent="GridContainer" unique_id=1675007370]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control5" unique_id=2041498355 instance=ExtResource("2_lxp54")]
+
+[node name="Control6" type="Control" parent="GridContainer" unique_id=447571366]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control6" unique_id=513232886 instance=ExtResource("2_lxp54")]
+
+[node name="Control7" type="Control" parent="GridContainer" unique_id=2099382227]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control7" unique_id=922391252 instance=ExtResource("2_lxp54")]
+
+[node name="Control8" type="Control" parent="GridContainer" unique_id=1076793780]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control8" unique_id=1792113157 instance=ExtResource("2_lxp54")]
+
+[node name="Control9" type="Control" parent="GridContainer" unique_id=2025788307]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control9" unique_id=1644047372 instance=ExtResource("2_lxp54")]
+
+[node name="Control10" type="Control" parent="GridContainer" unique_id=1012133591]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control10" unique_id=824336213 instance=ExtResource("2_lxp54")]
+
+[node name="Control11" type="Control" parent="GridContainer" unique_id=1461039460]
+layout_mode = 2
+
+[node name="ColorBase" parent="GridContainer/Control11" unique_id=1123323882 instance=ExtResource("2_lxp54")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1336613708]

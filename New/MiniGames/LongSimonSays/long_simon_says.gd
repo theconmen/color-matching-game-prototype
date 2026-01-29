@@ -10,6 +10,8 @@ var base_num_of_answers: int = 3
 var difficulty_scale: int = 0
 var enum_reference := MiniGameReference.MINI_GAMES.LongSimonSays
 var game_timer_length: float = 3.5
+@onready var guess_timer := $GuessTimer
+@onready var progress_bar := $ProgressBar
 
 #ideas on difficulty increase
 # make things faster
@@ -18,7 +20,7 @@ var game_timer_length: float = 3.5
 # make the random colors closer together in color
 # etc
 
-#TODO: Add progress bar node to show timer left
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,10 +29,16 @@ func _ready() -> void:
 	SignalBus.mini_game_ready.emit(enum_reference)
 	$ColorOptions.visible = false
 	$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
+	progress_bar.max_value = game_timer_length
 	difficulty_scale = get_difficulty_scale()
 	manage_difficulty_scale()
 	generate_color_options()
 	start()
+	
+	
+func _process(_delta) -> void:
+	if guess_timer.time_left <= guess_timer.wait_time:
+		progress_bar.value = guess_timer.time_left
 
 
 func generate_color_options():
@@ -61,7 +69,7 @@ func start():
 func show_puzzle():
 	$ColorOptions.visible = true
 	$SimonColor.visible = false
-	$GuessTimer.start(game_timer_length)
+	guess_timer.start(game_timer_length)
 	
 
 func _on_color_left_clicked(answer, _color):
@@ -75,7 +83,7 @@ func _on_color_left_clicked(answer, _color):
 	# they beat the mini game if the amount of times they answered is more than the amount of solutinos there are
 	if answers_count >= len(solutions_array):
 		answers_count = 0
-		$GuessTimer.stop()
+		guess_timer.stop()
 		SignalBus.mini_game_section_won.emit(enum_reference)
 		start()
 		

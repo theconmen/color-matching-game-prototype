@@ -47,4 +47,10 @@ one_shot = true
 wait_time = 3.5
 one_shot = true
 
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=514645932]
+offset_right = 48.0
+offset_bottom = 672.0
+fill_mode = 3
+show_percentage = false
+
 [connection signal="timeout" from="GuessTimer" to="." method="_on_guess_timer_timeout"]
