@@ -9,8 +9,8 @@ var sections_won: int = 0
 var base_num_of_answers: int = 3
 var difficulty_scale: int = 0
 var enum_reference := MiniGameReference.MINI_GAMES.LongSimonSays
-var game_timer_length: float = 3.5
-var num_of_color_options: int = 12
+var game_timer_length: float = 5.0
+var num_of_color_options: int = 8
 @onready var guess_timer := $GuessTimer
 @onready var progress_bar := $ProgressBar
 @onready var grid_container = $CanvasLayer/ColorContainer
@@ -26,6 +26,8 @@ var color_base: PackedScene = load('uid://cb083mnw8oavl')
 # etc
 
 
+#TODO: add breakpoints where new mechanics get added to game
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,7 +38,8 @@ func _ready() -> void:
 	$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
 	progress_bar.max_value = game_timer_length
 	difficulty_scale = get_difficulty_scale()
-	manage_difficulty_scale()
+	if difficulty_scale > 0:
+		manage_difficulty_scale()
 	generate_color_options()
 	start()
 	
@@ -124,12 +127,23 @@ func get_difficulty_scale():
 func manage_difficulty_scale():
 	if difficulty_scale % 3 == 1:
 		# animation "More!"
-		base_num_of_answers += 1
+		print('more')
+		for i in range(difficulty_scale/3.0):
+			if base_num_of_answers < 6:
+				base_num_of_answers += 1
 	elif difficulty_scale % 3 == 2:
 		# animation "Faster!"
-		game_timer_length -= 0.2
+		print('faster')
+		for i in range(difficulty_scale/3.0):
+			if game_timer_length > 2.0:
+				game_timer_length -= 0.2
+	elif difficulty_scale % 3 == 0:
+		print('harder')
+		for i in range(difficulty_scale/3.0):
+			if num_of_color_options < 16:
+				num_of_color_options += 1
 	else:
-		pass
+		print('No conditions met')
 
 
 func _on_guess_timer_timeout() -> void:

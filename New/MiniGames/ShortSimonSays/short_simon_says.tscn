@@ -25,29 +25,20 @@ fill_mode = 3
 
 [node name="ColorOptions" type="Node2D" parent="." unique_id=1391916633]
 
-[node name="ColorBase" parent="ColorOptions" unique_id=441243205 instance=ExtResource("1_j4xno")]
-position = Vector2(176, 96)
-
-[node name="ColorBase2" parent="ColorOptions" unique_id=1712824745 instance=ExtResource("1_j4xno")]
-position = Vector2(584, 104)
-
-[node name="ColorBase3" parent="ColorOptions" unique_id=959584945 instance=ExtResource("1_j4xno")]
-position = Vector2(952, 104)
-
-[node name="ColorBase4" parent="ColorOptions" unique_id=790960536 instance=ExtResource("1_j4xno")]
-position = Vector2(184, 528)
-
-[node name="ColorBase5" parent="ColorOptions" unique_id=978374872 instance=ExtResource("1_j4xno")]
-position = Vector2(584, 528)
-
-[node name="ColorBase6" parent="ColorOptions" unique_id=1926050562 instance=ExtResource("1_j4xno")]
-position = Vector2(952, 536)
-
 [node name="ShowColor" type="Timer" parent="." unique_id=415500533]
 one_shot = true
 
 [node name="PuzzleTimer" type="Timer" parent="." unique_id=1412117234]
 wait_time = 2.0
 one_shot = true
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1517879979]
+offset_left = 168.0
+offset_top = 80.0
+offset_right = 1168.0
+offset_bottom = 680.0
+theme_override_constants/h_separation = 300
+theme_override_constants/v_separation = 200
+columns = 4
 
 [connection signal="timeout" from="PuzzleTimer" to="." method="_on_puzzle_timer_timeout"]

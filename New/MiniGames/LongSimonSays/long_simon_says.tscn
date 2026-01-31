@@ -42,8 +42,8 @@ follow_viewport_enabled = true
 
 [node name="ColorContainer" type="GridContainer" parent="CanvasLayer" unique_id=1485575320]
 anchors_preset = -1
-anchor_left = 0.5071666
-anchor_top = 0.4813087
+anchor_left = 0.5002222
+anchor_top = 0.46896297
 anchor_right = 0.5002222
 anchor_bottom = 0.46896297
 offset_left = -432.25598
