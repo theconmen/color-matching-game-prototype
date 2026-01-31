@@ -1,7 +1,7 @@
 extends Node2D
 class_name LongSimonSays
 
-@onready var child_array = $ColorOptions.get_children()
+#@onready var child_array = $ColorOptions.get_children()
 var color_num : int = 0
 var solutions_array = []
 var answers_count: int = 0
@@ -10,8 +10,13 @@ var base_num_of_answers: int = 3
 var difficulty_scale: int = 0
 var enum_reference := MiniGameReference.MINI_GAMES.LongSimonSays
 var game_timer_length: float = 3.5
+var num_of_color_options: int = 12
 @onready var guess_timer := $GuessTimer
 @onready var progress_bar := $ProgressBar
+@onready var grid_container = $CanvasLayer/ColorContainer
+@onready var color_options = $ColorOptions
+var color_base: PackedScene = load('uid://cb083mnw8oavl')
+
 
 #ideas on difficulty increase
 # make things faster
@@ -40,15 +45,26 @@ func _process(_delta) -> void:
 	if guess_timer.time_left <= guess_timer.wait_time:
 		progress_bar.value = guess_timer.time_left
 
-
+#dynamically create color options and assign them to the appropriate spots based on the grid container
 func generate_color_options():
-	var color_array = ColorFunctions.generate_random_colors(len(child_array))
-	for child in child_array:
-		child.set_new_color(color_array[0])
-		color_array.remove_at(0)
+	var color_array = ColorFunctions.generate_random_colors(num_of_color_options)
+	for color in color_array:
+		var new_control = Control.new()
+		grid_container.add_child(new_control)
+		var new_color: ColorBase = color_base.instantiate()
+		color_options.add_child(new_color)
+		new_color.set_new_color(color)
+	call_deferred('set_new_color_positions')
+
+func set_new_color_positions():
+	var color_solutions_array = color_options.get_children()
+	var color_container_array = grid_container.get_children()
+	for i in len(color_solutions_array):
+		color_solutions_array[i].set_new_position(color_container_array[i].global_position)
 	
 	
 func pick_next_simon_color(amount: int = base_num_of_answers):
+	var child_array = color_options.get_children()
 	for i in range(amount):
 		solutions_array.append(child_array.pick_random())
 	

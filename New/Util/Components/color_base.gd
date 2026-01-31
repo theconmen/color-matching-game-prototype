@@ -43,3 +43,6 @@ func set_covered(color_hidden: bool, hidden_color: Color = Color(0.2,0.2,0.2)):
 		covered = false
 		$QuestionMark.visible = false
 		set_new_color(current_color)
+		
+func set_new_position(new_position: Vector2):
+	global_position = new_position
