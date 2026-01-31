@@ -2,8 +2,13 @@
 
 [ext_resource type="Script" uid="uid://j25hets3suqk" path="res://New/Main/game_manager.gd" id="1_exeg3"]
 [ext_resource type="PackedScene" uid="uid://cxg7bax3ij0p5" path="res://New/Main/Main UI/game_lost.tscn" id="2_ci0yl"]
+[ext_resource type="PackedScene" uid="uid://ck3ggmfu20kmx" path="res://New/Main/Main UI/minigame_win.tscn" id="3_crip4"]
 
 [node name="GameManager" type="Node2D" unique_id=1297450]
 script = ExtResource("1_exeg3")
 
 [node name="GameLost" parent="." unique_id=1701119821 instance=ExtResource("2_ci0yl")]
+visible = false
+
+[node name="MiniGameWin" parent="." unique_id=1043858293 instance=ExtResource("3_crip4")]
+z_index = 5

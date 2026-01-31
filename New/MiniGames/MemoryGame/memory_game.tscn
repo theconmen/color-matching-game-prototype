@@ -7,48 +7,48 @@
 script = ExtResource("1_kig7u")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=221609947]
-offset_right = 1168.0
-offset_bottom = 672.0
+offset_right = 1304.0
+offset_bottom = 736.0
 mouse_filter = 2
 color = Color(0.74509805, 0.80784315, 1, 1)
 
 [node name="ColorOptions" type="Node2D" parent="." unique_id=331347632]
 
 [node name="ColorBase" parent="ColorOptions" unique_id=1592181314 instance=ExtResource("1_jqyin")]
-position = Vector2(168, 96)
+position = Vector2(232, 112)
 
 [node name="ColorBase2" parent="ColorOptions" unique_id=338780741 instance=ExtResource("1_jqyin")]
-position = Vector2(440, 88)
+position = Vector2(504, 104)
 
 [node name="ColorBase7" parent="ColorOptions" unique_id=1317038159 instance=ExtResource("1_jqyin")]
-position = Vector2(1008, 96)
+position = Vector2(1072, 112)
 
 [node name="ColorBase3" parent="ColorOptions" unique_id=411896560 instance=ExtResource("1_jqyin")]
-position = Vector2(720, 88)
+position = Vector2(784, 104)
 
 [node name="ColorBase9" parent="ColorOptions" unique_id=1681231293 instance=ExtResource("1_jqyin")]
-position = Vector2(1016, 504)
+position = Vector2(1080, 520)
 
 [node name="ColorBase10" parent="ColorOptions" unique_id=1238640982 instance=ExtResource("1_jqyin")]
-position = Vector2(168, 520)
+position = Vector2(232, 536)
 
 [node name="ColorBase11" parent="ColorOptions" unique_id=1226014978 instance=ExtResource("1_jqyin")]
-position = Vector2(448, 520)
+position = Vector2(512, 536)
 
 [node name="ColorBase12" parent="ColorOptions" unique_id=203801668 instance=ExtResource("1_jqyin")]
-position = Vector2(728, 512)
+position = Vector2(792, 528)
 
 [node name="ColorBase8" parent="ColorOptions" unique_id=260243515 instance=ExtResource("1_jqyin")]
-position = Vector2(1008, 296)
+position = Vector2(1072, 312)
 
 [node name="ColorBase4" parent="ColorOptions" unique_id=1378493218 instance=ExtResource("1_jqyin")]
-position = Vector2(168, 304)
+position = Vector2(232, 320)
 
 [node name="ColorBase5" parent="ColorOptions" unique_id=516831742 instance=ExtResource("1_jqyin")]
-position = Vector2(440, 304)
+position = Vector2(504, 320)
 
 [node name="ColorBase6" parent="ColorOptions" unique_id=347815307 instance=ExtResource("1_jqyin")]
-position = Vector2(728, 296)
+position = Vector2(792, 312)
 
 [node name="ShowColor" type="Timer" parent="." unique_id=715173571]
 wait_time = 0.25
@@ -59,9 +59,9 @@ wait_time = 3.5
 one_shot = true
 
 [node name="TimerBar" type="ProgressBar" parent="." unique_id=804677767]
-offset_left = 48.0
-offset_top = 637.0
-offset_right = 1136.0
-offset_bottom = 664.0
+offset_left = 40.0
+offset_top = 656.0
+offset_right = 1248.0
+offset_bottom = 715.0
 
 [connection signal="timeout" from="PuzzleTime" to="." method="_on_puzzle_time_timeout"]

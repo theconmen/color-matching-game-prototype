@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://613lss217y1h"]
+
+[ext_resource type="FontFile" uid="uid://bt5i06nl4nhqj" path="res://New/Global UI/Rainbow2000-vnvAy.ttf" id="1_xd8u1"]
+
+[resource]
+Label/colors/font_color = Color(0.011400958, 0.0010340584, 0, 1)
+Label/colors/font_shadow_color = Color(0.8877047, 0.54649377, 0.21442291, 0.9843137)
+Label/font_sizes/font_size = 200
+Label/fonts/font = ExtResource("1_xd8u1")
+RichTextLabel/colors/default_color = Color(0.011702106, 0.011702109, 0.011702107, 1)
+RichTextLabel/fonts/normal_font = ExtResource("1_xd8u1")

@@ -7,19 +7,19 @@
 script = ExtResource("1_fukdu")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=8515501]
-offset_right = 1168.0
-offset_bottom = 672.0
+offset_right = 1312.0
+offset_bottom = 752.0
 mouse_filter = 2
 color = Color(0.96408325, 0.97333914, 0.99999934, 1)
 
 [node name="SimonColor" parent="." unique_id=587670066 instance=ExtResource("1_j4xno")]
-position = Vector2(576, 296)
+position = Vector2(656, 344)
 clickable = false
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1829124234]
 offset_left = 8.0
 offset_right = 56.0
-offset_bottom = 664.0
+offset_bottom = 712.0
 value = 73.96
 fill_mode = 3
 

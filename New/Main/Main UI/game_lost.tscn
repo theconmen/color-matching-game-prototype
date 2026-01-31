@@ -9,32 +9,32 @@ layer = 8
 script = ExtResource("1_xdc8p")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=522076860]
-offset_right = 1168.0
-offset_bottom = 664.0
+offset_right = 1376.0
+offset_bottom = 792.0
 mouse_filter = 2
 
 [node name="youLose" type="Label" parent="." unique_id=1168200274]
-offset_left = 264.0
-offset_top = 40.0
-offset_right = 888.0
-offset_bottom = 264.0
+offset_left = 352.0
+offset_top = 88.0
+offset_right = 976.0
+offset_bottom = 312.0
 theme = ExtResource("2_1cch3")
 theme_override_font_sizes/font_size = 146
 text = "yoiu lose"
 
 [node name="restart" type="Button" parent="." unique_id=466239322]
-offset_left = 464.0
-offset_top = 264.0
-offset_right = 704.0
-offset_bottom = 400.0
+offset_left = 552.0
+offset_top = 312.0
+offset_right = 792.0
+offset_bottom = 448.0
 theme = ExtResource("2_1cch3")
 text = "restart?"
 
 [node name="exit" type="Button" parent="." unique_id=1923753760]
-offset_left = 472.0
-offset_top = 440.0
-offset_right = 712.0
-offset_bottom = 576.0
+offset_left = 560.0
+offset_top = 488.0
+offset_right = 800.0
+offset_bottom = 624.0
 theme = ExtResource("2_1cch3")
 text = "Exit to Main menu"
 
