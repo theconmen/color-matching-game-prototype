@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmqro2rnqi8pl"]
+[gd_scene format=3 uid="uid://dmqro2rnqi8pl"]
 
 [ext_resource type="Script" uid="uid://j25hets3suqk" path="res://New/Main/game_manager.gd" id="1_exeg3"]
 [ext_resource type="PackedScene" uid="uid://cxg7bax3ij0p5" path="res://New/Main/Main UI/game_lost.tscn" id="2_ci0yl"]
 
-[node name="GameManager" type="Node2D"]
+[node name="GameManager" type="Node2D" unique_id=1297450]
 script = ExtResource("1_exeg3")
 
-[node name="GameLost" parent="." instance=ExtResource("2_ci0yl")]
+[node name="GameLost" parent="." unique_id=1701119821 instance=ExtResource("2_ci0yl")]

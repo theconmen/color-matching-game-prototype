@@ -17,6 +17,7 @@ func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: 
 	if clickable:
 		if event.is_action_pressed("left_click"):
 			SignalBus.color_left_clicked.emit(self, current_color)
+			print('left clicked')
 		elif event.is_action_pressed("right_click"):
 			SignalBus.color_right_clicked.emit(self, current_color)
 	else:
@@ -42,3 +43,6 @@ func set_covered(color_hidden: bool, hidden_color: Color = Color(0.2,0.2,0.2)):
 		covered = false
 		$QuestionMark.visible = false
 		set_new_color(current_color)
+		
+func set_new_position(new_position: Vector2):
+	global_position = new_position
