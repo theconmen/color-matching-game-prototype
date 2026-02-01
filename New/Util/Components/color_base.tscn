@@ -1,14 +1,10 @@
 [gd_scene format=3 uid="uid://cb083mnw8oavl"]
 
 [ext_resource type="Script" uid="uid://cokakfqr3yucx" path="res://New/Util/Components/color_base.gd" id="1_1nccd"]
-[ext_resource type="Texture2D" uid="uid://3bgr7o8dj66f" path="res://New/Assets/Visuals/icon.svg" id="1_ep218"]
 [ext_resource type="Shader" uid="uid://db1rt3ibjc8iv" path="res://New/Util/Components/color_base.gdshader" id="2_skjme"]
+[ext_resource type="Texture2D" uid="uid://dcn1r7yobyll1" path="res://New/Assets/Visuals/white_circle_outline.png" id="4_ab1lm"]
 [ext_resource type="Texture2D" uid="uid://bjonkh0110g2e" path="res://New/Assets/Visuals/question_mark.png" id="4_o1u7p"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_skjme"]
-resource_local_to_scene = true
-shader = ExtResource("2_skjme")
-shader_parameter/override_color = Vector4(1, 1, 0, 1)
+[ext_resource type="Texture2D" uid="uid://c5vgsbu01ssvd" path="res://New/Assets/Visuals/color_layer.png" id="5_xr87b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1nccd"]
 radius = 56.568542
@@ -16,12 +12,13 @@ radius = 56.568542
 [sub_resource type="CircleShape2D" id="CircleShape2D_ep218"]
 radius = 88.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ab1lm"]
+resource_local_to_scene = true
+shader = ExtResource("2_skjme")
+shader_parameter/override_color = Vector4(1, 1, 0, 1)
+
 [node name="ColorBase" type="AnimatableBody2D" unique_id=294235113]
 script = ExtResource("1_1nccd")
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=275785275]
-material = SubResource("ShaderMaterial_skjme")
-texture = ExtResource("1_ep218")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=487291985]
 shape = SubResource("CircleShape2D_1nccd")
@@ -31,9 +28,20 @@ shape = SubResource("CircleShape2D_1nccd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=797322795]
 shape = SubResource("CircleShape2D_ep218")
 
+[node name="WhiteCircleOutline" type="Sprite2D" parent="." unique_id=313452928]
+texture_filter = 1
+position = Vector2(0, 1)
+scale = Vector2(0.3, 0.31008333)
+texture = ExtResource("4_ab1lm")
+
+[node name="ColorLayer" type="Sprite2D" parent="." unique_id=1057780463]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ab1lm")
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("5_xr87b")
+
 [node name="QuestionMark" type="Sprite2D" parent="." unique_id=661583944]
 visible = false
-position = Vector2(7.999977, -7.6293945e-06)
 scale = Vector2(0.35815603, 0.29245284)
 texture = ExtResource("4_o1u7p")
 

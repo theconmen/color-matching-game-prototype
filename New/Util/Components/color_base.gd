@@ -6,7 +6,7 @@ class_name ColorBase
 @export var current_color: Color
 @export var clickable: bool = true
 @export var covered: bool = false
-@onready var sprite_material = $Icon.material
+@onready var sprite_material = $ColorLayer.material
 
 
 func _ready() -> void:
