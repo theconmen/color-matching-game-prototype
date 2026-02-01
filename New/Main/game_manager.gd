@@ -19,7 +19,8 @@ func _ready() -> void:
 #handle whenever the minigame is won
 func _on_mini_game_won(_game):
 	mini_game_win.visible = true
-	await get_tree().create_timer(0.5).timeout
+	await SignalBus.mini_game_win_animation_finished
+	mini_game_win.visible = false
 	change_minigame()
 	
 func _on_mini_game_lost():
@@ -28,7 +29,6 @@ func _on_mini_game_lost():
 	
 # handle changing the mini_game
 func change_minigame():
-	mini_game_win.visible = false
 	var children = self.get_children()
 	var next_minigame = pick_next_minigame()
 	for child in children:

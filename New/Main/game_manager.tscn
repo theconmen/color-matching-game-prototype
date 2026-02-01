@@ -11,4 +11,16 @@ script = ExtResource("1_exeg3")
 visible = false
 
 [node name="MiniGameWin" parent="." unique_id=1043858293 instance=ExtResource("3_crip4")]
-z_index = 5
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 616.0
+offset_top = 384.0
+offset_right = 616.0
+offset_bottom = 384.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 6
+size_flags_vertical = 6
+metadata/_edit_use_anchors_ = true

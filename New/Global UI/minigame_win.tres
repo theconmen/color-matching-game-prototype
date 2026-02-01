@@ -1,10 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://613lss217y1h"]
 
 [ext_resource type="FontFile" uid="uid://bt5i06nl4nhqj" path="res://New/Global UI/Rainbow2000-vnvAy.ttf" id="1_xd8u1"]
-[ext_resource type="FontFile" uid="uid://cjpx85kp0djk0" path="res://New/Global UI/RubikSprayPaint-Regular.ttf" id="1_xt0p0"]
+[ext_resource type="FontFile" uid="uid://blvewtoxiwxlk" path="res://New/Global UI/Bangers-Regular.ttf" id="1_xt0p0"]
 
 [resource]
-Label/colors/font_color = Color(0.7364516, 0.36325336, 0.08294619, 1)
+Label/colors/font_color = Color(0.98197454, 0.4469812, 0.19229543, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0.03711439, 0.011607448, 0.0009559459, 0.9843137)
 Label/constants/outline_size = 30

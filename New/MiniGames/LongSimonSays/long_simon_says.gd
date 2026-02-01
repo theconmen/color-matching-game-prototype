@@ -77,9 +77,6 @@ func start():
 	# difficulty scaler could become a var to put into the "pick next simon color"
 	pick_next_simon_color()
 	for solution in solutions_array:
-		$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
-		$BetweenColors.start()
-		await $BetweenColors.timeout
 		$SimonColor.set_new_color(solution.current_color)
 		$ShowColor.start()
 		await $ShowColor.timeout
