@@ -28,17 +28,17 @@ shape = SubResource("CircleShape2D_1nccd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=797322795]
 shape = SubResource("CircleShape2D_ep218")
 
+[node name="ColorLayer" type="Sprite2D" parent="." unique_id=1057780463]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ab1lm")
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("5_xr87b")
+
 [node name="WhiteCircleOutline" type="Sprite2D" parent="." unique_id=313452928]
 texture_filter = 1
 position = Vector2(0, 1)
 scale = Vector2(0.3, 0.31008333)
 texture = ExtResource("4_ab1lm")
-
-[node name="ColorLayer" type="Sprite2D" parent="." unique_id=1057780463]
-texture_filter = 1
-material = SubResource("ShaderMaterial_ab1lm")
-scale = Vector2(0.295, 0.295)
-texture = ExtResource("5_xr87b")
 
 [node name="QuestionMark" type="Sprite2D" parent="." unique_id=661583944]
 visible = false

@@ -38,7 +38,7 @@ offset_top = 80.0
 offset_right = 1168.0
 offset_bottom = 680.0
 theme_override_constants/h_separation = 300
-theme_override_constants/v_separation = 200
+theme_override_constants/v_separation = 250
 columns = 4
 
 [connection signal="timeout" from="PuzzleTimer" to="." method="_on_puzzle_timer_timeout"]
