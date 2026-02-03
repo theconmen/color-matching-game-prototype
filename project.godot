@@ -38,6 +38,13 @@ window/stretch/mode="viewport"
 
 Mini_games="All of the mini games available for Load are in this group"
 
+[importer_defaults]
+
+texture={
+&"detect_3d/compress_to": 0,
+&"mipmaps/generate": true
+}
+
 [input]
 
 left_click={

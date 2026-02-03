@@ -29,13 +29,13 @@ shape = SubResource("CircleShape2D_1nccd")
 shape = SubResource("CircleShape2D_ep218")
 
 [node name="ColorLayer" type="Sprite2D" parent="." unique_id=1057780463]
-texture_filter = 1
+texture_filter = 3
 material = SubResource("ShaderMaterial_ab1lm")
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("5_xr87b")
 
 [node name="WhiteCircleOutline" type="Sprite2D" parent="." unique_id=313452928]
-texture_filter = 1
+texture_filter = 3
 position = Vector2(0, 1)
 scale = Vector2(0.3, 0.31008333)
 texture = ExtResource("4_ab1lm")
