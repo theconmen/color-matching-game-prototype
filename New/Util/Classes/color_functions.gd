@@ -44,14 +44,18 @@ static func get_dominant_color(color):
 static func do_colors_match_exact(color_one: Color, color_two: Color) -> bool:
 	return color_one.is_equal_approx(color_two)
 
-
-static func generate_random_colors(amount: int):
+static func generate_random_colors(amount: float):
 	var color_array = []
-	var color: Color
+	var ratio = 1.0/amount
+	var hue = randf() # Random starting point each time
+	var negative = randi_range(1,2)
+	
 	for i in range(amount):
-		color = generate_random_color()
-		color_array.append(color)
+		color_array.append(Color.from_hsv(
+			(hue + randf_range(0.01,0.05)),
+			randf_range(0.8, 0.95),
+			randf_range(0.8, 0.95)
+		))
+		hue +=  ratio
+	
 	return color_array
-
-static func generate_random_color():
-	return Color(randf(), randf(), randf())
