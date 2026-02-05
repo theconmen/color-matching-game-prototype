@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ck3ggmfu20kmx"]
+
+[ext_resource type="Theme" uid="uid://613lss217y1h" path="res://New/Global UI/minigame_win.tres" id="1_okddv"]
+[ext_resource type="Script" uid="uid://mhpe3w2tlj3b" path="res://New/Main/Main UI/minigame_win.gd" id="1_r5v7p"]
+
+[node name="MiniGameWin" type="Control" unique_id=1043858293]
+process_mode = 3
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_r5v7p")
+play_label_animation = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=356075899]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -664.0
+offset_top = -152.0
+offset_right = 664.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12156863, 0.12156863, 0.12156863, 0.88235295)
+
+[node name="Label" type="Label" parent="." unique_id=583188055]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.5
+offset_top = -107.0
+offset_right = 337.5
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_okddv")
+text = "Great!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

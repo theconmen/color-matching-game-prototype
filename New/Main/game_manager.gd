@@ -5,17 +5,22 @@ class_name GameManager
 #Mini game reference list is kept in mini game reference autoload for use
 
 @onready var loss_screen = $GameLost
+@onready var mini_game_win = $MiniGameWin
 
 
 func _ready() -> void:
 	SignalBus.mini_game_won.connect(_on_mini_game_won)
 	SignalBus.player_lost.connect(_on_mini_game_lost)
 	loss_screen.visible = false
+	mini_game_win.visible = false
 	change_minigame()
 
 	
 #handle whenever the minigame is won
 func _on_mini_game_won(_game):
+	mini_game_win.visible = true
+	await SignalBus.mini_game_win_animation_finished
+	mini_game_win.visible = false
 	change_minigame()
 	
 func _on_mini_game_lost():
@@ -30,6 +35,7 @@ func change_minigame():
 		if child.is_in_group('Mini_games'):
 			child.queue_free()
 	add_child(next_minigame)
+	
 	
 # pick a random next minigame and return a reference to that minigame
 func pick_next_minigame():

@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://613lss217y1h"]
+
+[ext_resource type="FontFile" uid="uid://bt5i06nl4nhqj" path="res://New/Global UI/Rainbow2000-vnvAy.ttf" id="1_xd8u1"]
+[ext_resource type="FontFile" uid="uid://blvewtoxiwxlk" path="res://New/Global UI/Bangers-Regular.ttf" id="1_xt0p0"]
+
+[resource]
+Label/colors/font_color = Color(0.98197454, 0.4469812, 0.19229543, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0.03711439, 0.011607448, 0.0009559459, 0.9843137)
+Label/constants/outline_size = 30
+Label/font_sizes/font_size = 200
+Label/fonts/font = ExtResource("1_xt0p0")
+RichTextLabel/colors/default_color = Color(0.011702106, 0.011702109, 0.011702107, 1)
+RichTextLabel/fonts/normal_font = ExtResource("1_xd8u1")

@@ -30,11 +30,20 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 
 [global_group]
 
 Mini_games="All of the mini games available for Load are in this group"
+
+[importer_defaults]
+
+texture={
+&"detect_3d/compress_to": 0,
+&"mipmaps/generate": true
+}
 
 [input]
 

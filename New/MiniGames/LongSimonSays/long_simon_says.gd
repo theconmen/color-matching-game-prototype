@@ -6,7 +6,7 @@ var color_num : int = 0
 var solutions_array = []
 var answers_count: int = 0
 var sections_won: int = 0
-var base_num_of_answers: int = 3
+var base_num_of_answers: int = 2
 var difficulty_scale: int = 0
 var enum_reference := MiniGameReference.MINI_GAMES.LongSimonSays
 var game_timer_length: float = 5.0
@@ -77,9 +77,6 @@ func start():
 	# difficulty scaler could become a var to put into the "pick next simon color"
 	pick_next_simon_color()
 	for solution in solutions_array:
-		$SimonColor.set_new_color(Color(0.0, 0.0, 0.0))
-		$BetweenColors.start()
-		await $BetweenColors.timeout
 		$SimonColor.set_new_color(solution.current_color)
 		$ShowColor.start()
 		await $ShowColor.timeout

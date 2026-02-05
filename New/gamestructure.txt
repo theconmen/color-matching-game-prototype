@@ -36,4 +36,11 @@ GameIdeas:
 	Complete gameplay loop - in scope - prio 1 - done(enough)
 	
 	Done with all in scope items by 2/15
+	
+	
+	Immediate TODOs:
+		Add sounds to the game when you select option, when you win, when you lose - third
+		Add some background music (don't care about it too much) - fourth
+		Figure out the outlines of the color circles to make it look nicer - first - kinda better
+		Fix the random color generation logic problem - second - kind of lol
 			

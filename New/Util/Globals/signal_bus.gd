@@ -6,6 +6,7 @@ signal single_player_game_selected()
 # UI scene
 signal exit_to_main_button_pressed()
 signal continue_game_button_pressed()
+signal mini_game_win_animation_finished()
 
 #GamePlay signals
 signal color_changed(object, old_color, new_color)

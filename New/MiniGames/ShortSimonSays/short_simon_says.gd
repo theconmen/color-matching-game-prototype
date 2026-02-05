@@ -129,13 +129,13 @@ func manage_difficulty_scale():
 	if difficulty_scale % 3 == 1:
 		# animation "More!"
 		print('more')
-		for i in range(difficulty_scale/3):
+		for i in range(difficulty_scale/3.0):
 			if num_of_color_options < 16:
 				num_of_color_options += 1
 	elif difficulty_scale % 3 == 2:
 		# animation "Faster!"
 		print('faster')
-		for i in range(difficulty_scale/3):
+		for i in range(difficulty_scale/3.0):
 			if game_timer_length > 2.0:
 				game_timer_length -= 0.1
 	elif difficulty_scale % 5 == 0:

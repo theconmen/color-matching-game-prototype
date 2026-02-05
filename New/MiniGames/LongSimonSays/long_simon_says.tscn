@@ -7,14 +7,13 @@
 script = ExtResource("1_pa8el")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=252148636]
-offset_right = 1168.0
-offset_bottom = 672.0
+offset_right = 1296.0
+offset_bottom = 728.0
 mouse_filter = 2
 color = Color(0.74509805, 0.80784315, 1, 1)
 
 [node name="SimonColor" parent="." unique_id=762940441 instance=ExtResource("1_mm70g")]
-visible = false
-position = Vector2(576, 296)
+position = Vector2(640, 336)
 clickable = false
 
 [node name="ColorOptions" type="Node2D" parent="." unique_id=1130447427]
@@ -32,7 +31,7 @@ one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=514645932]
 offset_right = 48.0
-offset_bottom = 672.0
+offset_bottom = 720.0
 fill_mode = 3
 show_percentage = false
 
@@ -54,7 +53,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 theme_override_constants/h_separation = 300
-theme_override_constants/v_separation = 200
+theme_override_constants/v_separation = 250
 columns = 4
 metadata/_edit_use_anchors_ = true
 

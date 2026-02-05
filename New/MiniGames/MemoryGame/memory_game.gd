@@ -71,6 +71,7 @@ func hide_child(child):
 	
 
 func _on_color_left_clicked(color_object_clicked: ColorBase, _color):
+	color_object_clicked.clickable = false
 	if len(color_selected_array) <= match_amt:
 		show_child(color_object_clicked)
 		color_selected_array.append(color_object_clicked)
@@ -88,6 +89,7 @@ func _on_color_left_clicked(color_object_clicked: ColorBase, _color):
 			await $ShowColor.timeout
 			for child in color_selected_array:
 				hide_child(child)
+				child.clickable = true
 			color_selected_array = []
 	
 	
